@@ -2,12 +2,24 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ui_design/travel%20app/custom%20widgets/widgets.dart';
 
-class splash_screen extends StatelessWidget {
+class splash_screen extends StatefulWidget {
   const splash_screen({super.key});
 
+  @override
+  State<splash_screen> createState() => _splash_screenState();
+}
 
+class _splash_screenState extends State<splash_screen> {
+
+  @override
+  void initState() {
+    super.initState();
+
+  }
   @override
   Widget build(BuildContext context) {
     var _width=MediaQuery.of(context).size.width;
@@ -29,31 +41,42 @@ class splash_screen extends StatelessWidget {
 
             )
           ),
-          child: Container(
-            height: _height*0.15,
-            width: _width,
-            color: Colors.white,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Row(
+          child: Center(
+            child: Container(
+              height: _height*0.16,
+              width: _width,
+              child: FittedBox(
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Travel',style: GoogleFonts.pacifico(
-                      color: Colors.white,
-                      fontSize: 30
-                    ),),
-                    Icon(CupertinoIcons.heart)
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('Travel',style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 25,
+                          fontFamily:"splash"
+                        ),),
+                        SizedBox(
+                          width:7,
+                        ),
+                        Image(image:AssetImage('assets/images/earth.png'),height: 32,color: Colors.white, )
+                      ],
+                    ),
+                    SizedBox(
+                      height:10 ,
+                    ),
+                    Column(
+                      children: [
+                        splash_text("Find Your Dreams"),
+                        splash_text("Destination with Us"),
+
+                      ],
+                    )
                   ],
                 ),
-                Column(
-                  children: [
-                    Text("fwenjfhewlfjwilf"),
-                    Text("fwenjfhewlfjwilf"),
+              ),
 
-                  ],
-                )
-              ],
             ),
           ),
         ),
