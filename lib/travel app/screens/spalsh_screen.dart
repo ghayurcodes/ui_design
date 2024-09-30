@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class splash_screen extends StatelessWidget {
   const splash_screen({super.key});
@@ -15,13 +16,45 @@ class splash_screen extends StatelessWidget {
       backgroundColor: Colors.blue,
       body: Center(
         child: Container(
-         
-          height: _height*0.2,
-          color: Colors.red,
-          child: FittedBox(
-            child: Text('heloo',style: TextStyle(
-              fontSize: 400
-            ),),
+          width: _width,
+          height: _height,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Color(0xff005e9b),
+                Color(0xff012152),
+              ],
+              begin: Alignment.topCenter,
+               end: Alignment.bottomCenter,
+
+            )
+          ),
+          child: Container(
+            height: _height*0.15,
+            width: _width,
+            color: Colors.white,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('Travel',style: GoogleFonts.pacifico(
+                      color: Colors.white,
+                      fontSize: 30
+                    ),),
+                    Icon(CupertinoIcons.heart)
+                  ],
+                ),
+                Column(
+                  children: [
+                    Text("fwenjfhewlfjwilf"),
+                    Text("fwenjfhewlfjwilf"),
+
+                  ],
+                )
+              ],
+            ),
           ),
         ),
       ),
