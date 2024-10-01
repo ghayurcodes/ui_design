@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:ui_design/travel%20app/custom%20widgets/widgets.dart';
 import '../providers/travel_app_provider.dart';
 
 
@@ -26,7 +27,6 @@ class _home_screenState extends State<home_screen> {
               margin: EdgeInsets.only(top: 15),
               width: _width,
               height: _height*0.12,
-              color: Colors.red,
               padding: EdgeInsets.all(10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -110,7 +110,7 @@ class _home_screenState extends State<home_screen> {
             Container(
               width: _width,
               height: _height*0.09,
-              color: Colors.pinkAccent,
+
               padding: EdgeInsets.symmetric(vertical: 17),
               child: ListView.builder(itemBuilder: (context, index) {
                 return Container(
@@ -118,28 +118,41 @@ class _home_screenState extends State<home_screen> {
                   padding: EdgeInsets.symmetric(horizontal: 30,),
                   child: Center(
                     child: Text("Ghayur",style: TextStyle(
-                      color: Colors.black.withAlpha(100)
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16
                     ),),
                   ),
                   decoration: BoxDecoration(
                      borderRadius: BorderRadius.circular(20),
-                    color: Colors.white
+                    color: Color(0xff2f2f2f)
                   ),
                 );
               },itemCount: 7,
               scrollDirection: Axis.horizontal,),
             ),
+            SizedBox(
+              height: _height*0.03,
+            ),
             // Expanded(
             //   child: ListView.builder(itemBuilder: (context, index) {
-            //     return Stack(
-            //       children: [
-            //         Container(
-            //
-            //         )
-            //       ],
-            //     );
+            //     return destination_card();
             //   },),
             // )
+            Expanded(child:destination_card()
+            ),
+            SizedBox(
+              height: _height*0.03,
+            ),
+            Container(
+              height: _height*0.1,
+              color: Colors.red,
+              child: Center(
+                child: Text("botom bar here"),
+              ),
+            )
+
+
 
           ],),
         ),
