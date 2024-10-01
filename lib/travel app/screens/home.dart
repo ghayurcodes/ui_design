@@ -33,8 +33,9 @@ class _home_screenState extends State<home_screen> {
                  children: [
                    Column(
                      crossAxisAlignment: CrossAxisAlignment.start,
+                     mainAxisAlignment: MainAxisAlignment.center,
                      children: [
-                       Text("Hi, David👋",style: TextStyle(
+                       Text("Hi, Jenny👋",style: TextStyle(
                          fontSize: _width*0.07,
                          fontWeight: FontWeight.w500,
                          color: Colors.black
@@ -48,12 +49,82 @@ class _home_screenState extends State<home_screen> {
                      ],
                    ),
                    CircleAvatar(
-                     backgroundColor: Colors.white,
-                     child: Image.asset('assets/images/earth.png'),
-                   )
+                    radius: 30,
+                     backgroundImage: NetworkImage("https://www.shutterstock.com/image-photo/passport-photo-portrait-woman-on-260nw-2438031869.jpg")
+                   ),
                  ],
               ),
-            )
+            ),
+            SizedBox(
+              height: _height*0.03,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'Search places',
+                  prefixIcon: Icon(Icons.search, color: Colors.black.withAlpha(100)),
+                  suffixIcon: Icon(Icons.tune, color: Colors.black.withAlpha(100)),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                    borderSide: BorderSide.none, // No visible border by default
+                  ),
+                  contentPadding: EdgeInsets.symmetric(vertical: 10.0),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(17),
+                    borderSide: BorderSide(color:Colors.black.withAlpha(100)), // Light grey border
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(17),
+                    borderSide: BorderSide(color: Colors.black.withAlpha(100)), // Light grey border
+                  ),
+                ),
+                maxLines: 1,
+              ),
+            ),
+            SizedBox(
+              height: _height*0.03,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Popular Places",style: TextStyle(
+                      fontSize: _width*0.05,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.black
+                  ),),
+                  Text("View all",style: TextStyle(
+                      fontSize: _width*0.04,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black.withAlpha(100)
+                  ),),
+
+                ],
+              ),
+            ),
+            SizedBox(
+              height: _height*0.03,
+            ),
+            Container(
+              width: _width,
+              height: _height*0.1,
+              color: Colors.pinkAccent,
+              
+            ),
+            // Expanded(
+            //   child: ListView.builder(itemBuilder: (context, index) {
+            //     return Stack(
+            //       children: [
+            //         Container(
+            //
+            //         )
+            //       ],
+            //     );
+            //   },),
+            // )
+
           ],),
         ),
       ),
