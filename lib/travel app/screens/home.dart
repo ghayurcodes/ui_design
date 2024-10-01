@@ -109,9 +109,25 @@ class _home_screenState extends State<home_screen> {
             ),
             Container(
               width: _width,
-              height: _height*0.1,
+              height: _height*0.09,
               color: Colors.pinkAccent,
-              
+              padding: EdgeInsets.symmetric(vertical: 17),
+              child: ListView.builder(itemBuilder: (context, index) {
+                return Container(
+                  margin: EdgeInsets.symmetric(horizontal: 10),
+                  padding: EdgeInsets.symmetric(horizontal: 30,),
+                  child: Center(
+                    child: Text("Ghayur",style: TextStyle(
+                      color: Colors.black.withAlpha(100)
+                    ),),
+                  ),
+                  decoration: BoxDecoration(
+                     borderRadius: BorderRadius.circular(20),
+                    color: Colors.white
+                  ),
+                );
+              },itemCount: 7,
+              scrollDirection: Axis.horizontal,),
             ),
             // Expanded(
             //   child: ListView.builder(itemBuilder: (context, index) {
