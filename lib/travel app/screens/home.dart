@@ -14,12 +14,17 @@ class home_screen extends StatefulWidget {
 }
 
 class _home_screenState extends State<home_screen> {
+
+  
+  int _selectedIndex = -1;
+
+
   @override
   Widget build(BuildContext context) {
     var _width=MediaQuery.of(context).size.width;
     var _height=MediaQuery.of(context).size.height;
 
-    // var provider =Provider.of<home_provider>(context);
+    var provider =Provider.of<home_provider>(context);
     return Scaffold(
       body: SafeArea(
         child: Center(
@@ -111,57 +116,68 @@ class _home_screenState extends State<home_screen> {
             ),
             Container(
               width: _width,
-              height: _height*0.09,
+              height: _height * 0.09,
+              padding: const EdgeInsets.symmetric(vertical: 17),
+              child: ListView.builder(
+                itemCount: 7,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  // Determine if this is the selected item
+                  bool isSelected = index == _selectedIndex;
 
-              padding: EdgeInsets.symmetric(vertical: 17),
-              child: ListView.builder(itemBuilder: (context, index) {
-                return Container(
-                  margin: EdgeInsets.symmetric(horizontal: 10),
-                  padding: EdgeInsets.symmetric(horizontal: 30,),
-                  child: Center(
-                    child: Text("Ghayur",style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 16
-                    ),),
-                  ),
-                  decoration: BoxDecoration(
-                     borderRadius: BorderRadius.circular(20),
-                    color: Color(0xff2f2f2f)
-                  ),
-                );
-              },itemCount: 7,
-              scrollDirection: Axis.horizontal,),
+                  return GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        _selectedIndex = index; // Update selected index
+                      });
+                    },
+                    child: Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 10),
+                      padding: const EdgeInsets.symmetric(horizontal: 30),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: isSelected
+                            ? const Color(0xff2f2f2f) // Highlighted color
+                            : Colors.grey[400], // Grayed-out color
+                      ),
+                      child: Center(
+                        child: Text(
+                          "Ghayur",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 16),
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              ),
             ),
             SizedBox(
               height: _height*0.03,
             ),
-            // Expanded(
-            //   child: ListView.builder(itemBuilder: (context, index) {
-            //     return destination_card();
-            //   },),
-            // )
+
             Expanded(child:destination_card()
             ),
             SizedBox(
               height: _height*0.03,
             ),
             Container(
-              color: Colors.red,
+
               padding: EdgeInsets.symmetric(horizontal: 20),
-              height: _height*0.1,
+              height: _height*0.08,
               child: GNav(
                 // rippleColor: Colors.grey.withOpacity(800), // tab button ripple color when pressed
-                tabBorderRadius: 10,
-                tabActiveBorder: Border.all(color: Colors.black, width: 1), // tab button border
+                tabBorderRadius: 25,
+                tabActiveBorder: Border.all(color: Colors.black, width: 1),
                 tabBorder: Border.all(color: Colors.white, width: 1), // tab button border
-                curve: Curves.linear, // tab animation curves// tab animation duration
-                gap: 8, // the tab button gap between icon and text
-                color: Colors.black.withOpacity(opacity), // unselected icon color
-                activeColor: Colors.purple, // selected icon and text color
-                iconSize: 24, // tab button icon size
-                tabBackgroundColor: Colors.purple.withOpacity(0.1), // selected tab background color
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5), // navigation bar padding
+                curve: Curves.ease, // tab animation curves// tab animation duration
+                gap: 8, // the tab button gap between icon and text// unselected icon color
+                activeColor: Colors.black, // selected icon and text color
+                iconSize: 25, // tab button icon size
+                tabBackgroundColor: Colors.black.withOpacity(0.1),
+                padding: EdgeInsets.symmetric(horizontal: 30, vertical: 13), // navigation bar padding
                   tabs: [
                     GButton(
                       icon: LineIcons.home,
@@ -172,16 +188,12 @@ class _home_screenState extends State<home_screen> {
                       text: 'Likes',
                     ),
                     GButton(
-                      icon: LineIcons.search,
-                      text: 'Search',
-                    ),
-                    GButton(
                       icon: LineIcons.user,
                       text: 'Profile',
                     ),
 
                   ],
-                selectedIndex: 2,
+
               ),
             )
 
