@@ -15,16 +15,16 @@ class home_screen extends StatefulWidget {
 
 class _home_screenState extends State<home_screen> {
 
+
   
-  int _selectedIndex = -1;
 
 
   @override
   Widget build(BuildContext context) {
     var _width=MediaQuery.of(context).size.width;
     var _height=MediaQuery.of(context).size.height;
-
-    var provider =Provider.of<home_provider>(context);
+    print("build");
+    var provider =Provider.of<home_provider>(context,listen: false);
     return Scaffold(
       body: SafeArea(
         child: Center(
@@ -116,43 +116,46 @@ class _home_screenState extends State<home_screen> {
             ),
             Container(
               width: _width,
-              height: _height * 0.09,
-              padding: const EdgeInsets.symmetric(vertical: 17),
-              child: ListView.builder(
-                itemCount: 7,
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) {
-                  // Determine if this is the selected item
-                  bool isSelected = index == _selectedIndex;
 
-                  return GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        _selectedIndex = index; // Update selected index
-                      });
-                    },
-                    child: Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 10),
-                      padding: const EdgeInsets.symmetric(horizontal: 30),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: isSelected
-                            ? const Color(0xff2f2f2f) // Highlighted color
-                            : Colors.grey[400], // Grayed-out color
-                      ),
-                      child: Center(
-                        child: Text(
-                          "Ghayur",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 16),
+              height: _height * 0.08,
+              padding: const EdgeInsets.symmetric(vertical: 11),
+              child: Consumer<home_provider>(builder: (context, value, child) {
+           
+                return ListView.builder(
+                  itemCount: 7,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    // Determine if this is the selected item
+                    bool isSelected = index == value.selectedindex;
+
+                    return GestureDetector(
+                      onTap: () {
+                          value.set_selected_category(index); // Update selected index
+
+                      },
+                      child: Container(
+                        margin: const EdgeInsets.symmetric(horizontal: 10),
+                        padding: const EdgeInsets.symmetric(horizontal: 30),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: isSelected
+                                ? const Color(0xff2f2f2f) // Highlighted color
+                                : Colors.transparent // Grayed-out color
+                        ),
+                        child: Center(
+                          child: Text(
+                            "Ghayur",
+                            style: TextStyle(
+                                color: isSelected?Colors.white:Colors.black.withAlpha(100),
+                                fontWeight: FontWeight.w600,
+                                fontSize: 16),
+                          ),
                         ),
                       ),
-                    ),
-                  );
-                },
-              ),
+                    );
+                  },
+                );
+              },),
             ),
             SizedBox(
               height: _height*0.03,

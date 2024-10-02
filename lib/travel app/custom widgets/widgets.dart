@@ -40,9 +40,9 @@ destination_card(){
           ),
         ),
         Positioned(
-          bottom: 10,
-          right: 15,
-          left: 15,
+          bottom: 15,
+          right: 20,
+          left: 20,
           child: BlurryContainer(
             color: CupertinoColors.black.withOpacity(0.4),
               child: Column(
