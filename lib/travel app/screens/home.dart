@@ -23,7 +23,6 @@ class _home_screenState extends State<home_screen> {
   Widget build(BuildContext context) {
     var _width=MediaQuery.of(context).size.width;
     var _height=MediaQuery.of(context).size.height;
-    print("build");
     var provider =Provider.of<home_provider>(context,listen: false);
     return Scaffold(
       body: SafeArea(
@@ -116,11 +115,10 @@ class _home_screenState extends State<home_screen> {
             ),
             Container(
               width: _width,
-
               height: _height * 0.08,
               padding: const EdgeInsets.symmetric(vertical: 11),
               child: Consumer<home_provider>(builder: (context, value, child) {
-           
+
                 return ListView.builder(
                   itemCount: 7,
                   scrollDirection: Axis.horizontal,
@@ -137,21 +135,31 @@ class _home_screenState extends State<home_screen> {
                         margin: const EdgeInsets.symmetric(horizontal: 10),
                         padding: const EdgeInsets.symmetric(horizontal: 30),
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: isSelected
-                                ? const Color(0xff2f2f2f) // Highlighted color
-                                : Colors.transparent // Grayed-out color
+                          borderRadius: BorderRadius.circular(20),
+                          color: isSelected
+                              ? const Color(0xff2f2f2f) // Highlighted color
+                              : Colors.transparent,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.2), // Reduced opacity for a subtler shadow
+                              spreadRadius: 3, // Increase this value for a wider spread
+                              blurRadius: 5, // Increase this value for a softer shadow
+                              offset: Offset(0, 2), // Slight downward offset for a bulging effect
+                            ),
+                          ],
                         ),
                         child: Center(
                           child: Text(
                             "Ghayur",
                             style: TextStyle(
-                                color: isSelected?Colors.white:Colors.black.withAlpha(100),
-                                fontWeight: FontWeight.w600,
-                                fontSize: 16),
+                              color: isSelected ? Colors.white : Colors.black.withAlpha(100),
+                              fontWeight: FontWeight.w600,
+                              fontSize: 16,
+                            ),
                           ),
                         ),
-                      ),
+                      )
+
                     );
                   },
                 );
