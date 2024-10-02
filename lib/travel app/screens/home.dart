@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:line_icons/line_icons.dart';
 import 'package:provider/provider.dart';
 import 'package:ui_design/travel%20app/custom%20widgets/widgets.dart';
 import '../providers/travel_app_provider.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 
 
 class home_screen extends StatefulWidget {
@@ -17,7 +19,7 @@ class _home_screenState extends State<home_screen> {
     var _width=MediaQuery.of(context).size.width;
     var _height=MediaQuery.of(context).size.height;
 
-    var provider =Provider.of<home_provider>(context);
+    // var provider =Provider.of<home_provider>(context);
     return Scaffold(
       body: SafeArea(
         child: Center(
@@ -145,10 +147,41 @@ class _home_screenState extends State<home_screen> {
               height: _height*0.03,
             ),
             Container(
-              height: _height*0.1,
               color: Colors.red,
-              child: Center(
-                child: Text("botom bar here"),
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              height: _height*0.1,
+              child: GNav(
+                // rippleColor: Colors.grey.withOpacity(800), // tab button ripple color when pressed
+                tabBorderRadius: 10,
+                tabActiveBorder: Border.all(color: Colors.black, width: 1), // tab button border
+                tabBorder: Border.all(color: Colors.white, width: 1), // tab button border
+                curve: Curves.linear, // tab animation curves// tab animation duration
+                gap: 8, // the tab button gap between icon and text
+                color: Colors.black.withOpacity(opacity), // unselected icon color
+                activeColor: Colors.purple, // selected icon and text color
+                iconSize: 24, // tab button icon size
+                tabBackgroundColor: Colors.purple.withOpacity(0.1), // selected tab background color
+                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5), // navigation bar padding
+                  tabs: [
+                    GButton(
+                      icon: LineIcons.home,
+                      text: 'Home',
+                    ),
+                    GButton(
+                      icon: LineIcons.heart,
+                      text: 'Likes',
+                    ),
+                    GButton(
+                      icon: LineIcons.search,
+                      text: 'Search',
+                    ),
+                    GButton(
+                      icon: LineIcons.user,
+                      text: 'Profile',
+                    ),
+
+                  ],
+                selectedIndex: 2,
               ),
             )
 
