@@ -167,7 +167,6 @@ class _home_screenState extends State<home_screen> {
             SizedBox(
               height: _height*0.03,
             ),
-
             Expanded(child:destination_card()
             ),
             SizedBox(
