@@ -116,7 +116,7 @@ class _home_screenState extends State<home_screen> {
             Container(
               width: _width,
               height: _height * 0.08,
-              padding: const EdgeInsets.symmetric(vertical: 11),
+              padding: const EdgeInsets.symmetric(vertical: 5),
               child: Consumer<home_provider>(builder: (context, value, child) {
 
                 return ListView.builder(
@@ -132,21 +132,20 @@ class _home_screenState extends State<home_screen> {
 
                       },
                       child: Container(
-                        margin: const EdgeInsets.symmetric(horizontal: 10),
+                        margin: const EdgeInsets.symmetric(horizontal: 10,vertical: 6),
                         padding: const EdgeInsets.symmetric(horizontal: 30),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                           color: isSelected
                               ? const Color(0xff2f2f2f) // Highlighted color
-                              : Colors.transparent,
-                          boxShadow: [
+                              : const Color(0xfffef7ff),
+                          boxShadow: isSelected?[
                             BoxShadow(
-                              color: Colors.black.withOpacity(0.2), // Reduced opacity for a subtler shadow
-                              spreadRadius: 3, // Increase this value for a wider spread
-                              blurRadius: 5, // Increase this value for a softer shadow
-                              offset: Offset(0, 2), // Slight downward offset for a bulging effect
+                              color: Colors.black.withOpacity(0.4),
+                              spreadRadius: 1,
+                              blurRadius: 3,
                             ),
-                          ],
+                          ]:null,
                         ),
                         child: Center(
                           child: Text(
