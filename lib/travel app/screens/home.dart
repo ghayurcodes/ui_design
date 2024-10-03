@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:provider/provider.dart';
@@ -167,7 +168,16 @@ class _home_screenState extends State<home_screen> {
             SizedBox(
               height: _height*0.03,
             ),
-            Expanded(child:destination_card()
+            Expanded(child:CarouselSlider(
+              options: CarouselOptions(height: 400.0),
+              items: [1,2,3,4,5].map((i) {
+                return Builder(
+                  builder: (BuildContext context) {
+                    return destination_card();
+                  },
+                );
+              }).toList(),
+            )
             ),
             SizedBox(
               height: _height*0.03,
