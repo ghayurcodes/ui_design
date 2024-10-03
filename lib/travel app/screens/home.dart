@@ -169,7 +169,19 @@ class _home_screenState extends State<home_screen> {
               height: _height*0.03,
             ),
             Expanded(child:CarouselSlider(
-              options: CarouselOptions(height: 400.0),
+
+              options: CarouselOptions(height: 400,
+              autoPlay: true,
+               autoPlayInterval: Duration(seconds: 10),
+                viewportFraction: 0.8,
+                enableInfiniteScroll: false,
+                enlargeCenterPage: true,
+                enlargeFactor: 0.1,
+                initialPage: 1,
+
+
+              ),
+
               items: [1,2,3,4,5].map((i) {
                 return Builder(
                   builder: (BuildContext context) {
