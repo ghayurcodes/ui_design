@@ -4,6 +4,7 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:blurrycontainer/blurrycontainer.dart';
 import 'package:flutter/material.dart';
+import 'package:line_icons/line_icons.dart';
 
 splash_text(String txt){
 
@@ -86,7 +87,7 @@ destination_card(){
                 children: [
                   Row(
                     children: [
-                      Icon(CupertinoIcons.location_solid,color: CupertinoColors.inactiveGray,),
+                      Icon(LineIcons.mapMarker,color: CupertinoColors.inactiveGray,),
                       SizedBox(width: 5,),
                       Text("description",style: TextStyle(
                         color: CupertinoColors.inactiveGray

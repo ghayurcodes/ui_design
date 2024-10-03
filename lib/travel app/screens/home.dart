@@ -194,10 +194,10 @@ class _home_screenState extends State<home_screen> {
               ),
             )
             ),
-            // SizedBox(
-            //   height: _height*0.01,
-            // ),
-            Divider(),
+            SizedBox(
+              height: _height*0.01,
+            ),
+
             Container(
 
               padding: EdgeInsets.symmetric(horizontal: 20),
