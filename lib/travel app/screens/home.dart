@@ -168,33 +168,36 @@ class _home_screenState extends State<home_screen> {
             SizedBox(
               height: _height*0.03,
             ),
-            Expanded(child:CarouselSlider(
+            Expanded(child:Container(
 
-              options: CarouselOptions(height: 400,
-              autoPlay: true,
-               autoPlayInterval: Duration(seconds: 1),
-                viewportFraction: 0.8,
-                enableInfiniteScroll: false,
-                enlargeCenterPage: true,
-                enlargeFactor: 0.1,
-                initialPage: 1,
-                scrollPhysics: BouncingScrollPhysics()
+              child: CarouselSlider(
+
+                options: CarouselOptions(height: double.maxFinite,
+                autoPlay: true,
+                 autoPlayInterval: Duration(seconds: 3),
+                  viewportFraction: 0.8,
+                  enableInfiniteScroll: false,
+                  enlargeCenterPage: true,
+                  initialPage: 1,
+                  scrollPhysics: BouncingScrollPhysics()
 
 
+                ),
+
+                items: [1,2,3,4,5].map((i) {
+                  return Builder(
+                    builder: (BuildContext context) {
+                      return destination_card();
+                    },
+                  );
+                }).toList(),
               ),
-
-              items: [1,2,3,4,5].map((i) {
-                return Builder(
-                  builder: (BuildContext context) {
-                    return destination_card();
-                  },
-                );
-              }).toList(),
             )
             ),
-            SizedBox(
-              height: _height*0.03,
-            ),
+            // SizedBox(
+            //   height: _height*0.01,
+            // ),
+            Divider(),
             Container(
 
               padding: EdgeInsets.symmetric(horizontal: 20),

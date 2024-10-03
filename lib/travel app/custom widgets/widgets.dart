@@ -17,8 +17,8 @@ splash_text(String txt){
 }
 
 destination_card(){
-  return Padding(
-    padding: EdgeInsets.symmetric(horizontal: 20),
+  return Container(
+    margin: EdgeInsets.symmetric(vertical: 10,horizontal: 10),
     child: Stack(
       children: [
         Container(
@@ -27,7 +27,16 @@ destination_card(){
               image: NetworkImage('https://burst.shopifycdn.com/photos/hiker-looks-up-at-vertical-mountain-peaks.jpg?width=1000&format=pjpg&exif=0&iptc=0'),
               fit: BoxFit.cover
             ),
-            borderRadius: BorderRadius.circular(20)
+            borderRadius: BorderRadius.circular(20),
+            boxShadow: [
+              BoxShadow(
+                blurRadius: 3,
+                spreadRadius: 1,
+                color: Colors.black.withOpacity(0.7),
+                offset: Offset(0, 3)
+
+              )
+            ]
           ),
 
         ),
