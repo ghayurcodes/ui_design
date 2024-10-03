@@ -172,12 +172,13 @@ class _home_screenState extends State<home_screen> {
 
               options: CarouselOptions(height: 400,
               autoPlay: true,
-               autoPlayInterval: Duration(seconds: 10),
+               autoPlayInterval: Duration(seconds: 1),
                 viewportFraction: 0.8,
                 enableInfiniteScroll: false,
                 enlargeCenterPage: true,
                 enlargeFactor: 0.1,
                 initialPage: 1,
+                scrollPhysics: BouncingScrollPhysics()
 
 
               ),
