@@ -188,7 +188,7 @@ class _home_screenState extends State<home_screen> {
                 items: [1,2,3,4,5].map((i) {
                   return Builder(
                     builder: (BuildContext context) {
-                      return destination_card(right: CupertinoIcons.heart, left: CupertinoIcons.heart, right_icon_on_tap: (){}, price: 233);
+                      return destination_card(CupertinoIcons.heart, null,  null, null);
                     },
                   );
                 }).toList(),
