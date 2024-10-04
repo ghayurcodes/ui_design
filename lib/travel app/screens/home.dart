@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:provider/provider.dart';
 import 'package:ui_design/travel%20app/custom%20widgets/widgets.dart';
+import 'package:ui_design/travel%20app/screens/travel_info.dart';
 import '../providers/travel_app_provider.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
@@ -188,7 +189,9 @@ class _home_screenState extends State<home_screen> {
                 items: [1,2,3,4,5].map((i) {
                   return Builder(
                     builder: (BuildContext context) {
-                      return destination_card(CupertinoIcons.heart, null,  null, null);
+                      return destination_card(CupertinoIcons.heart, null,  null, null,(){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => destination_info(),));
+                      },null);
                     },
                   );
                 }).toList(),
