@@ -75,37 +75,108 @@ splash_text(String txt){
             left: 20,
             child: BlurryContainer(
                 color: CupertinoColors.black.withOpacity(0.4),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: price!=null?[
-                    Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          RichText(
-                            text: TextSpan(
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                              ),
-                              children: <TextSpan>[
-                                TextSpan(text: 'Mount Fuji, ',style: TextStyle(
-                                    fontSize: 20
-                                )),
-                                TextSpan(
-                                  text: 'Tokyo',
-                                  style: TextStyle(
-                                      fontSize: 17,
-                                      color: CupertinoColors.inactiveGray
-                                  ),
+                child: Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: price!=null?[
+                      Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            RichText(
+                              text: TextSpan(
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
                                 ),
+                                children: <TextSpan>[
+                                  TextSpan(text: 'Mount Fuji, ',style: TextStyle(
+                                      fontSize: 20
+                                  )),
+                                  TextSpan(
+                                    text: 'Tokyo',
+                                    style: TextStyle(
+                                        fontSize: 17,
+                                        color: CupertinoColors.inactiveGray
+                                    ),
+                                  ),
+
+
+                                ],
+                              ),
+                            ),
+                            SizedBox(
+                              height: 7,
+                            ),
+                            Row(
+                              children: [
+                                Icon(LineIcons.mapMarker,color: CupertinoColors.inactiveGray,),
+                                SizedBox(width: 5,),
+                                Text("description",style: TextStyle(
+                                    color: CupertinoColors.inactiveGray
+                                ),),
 
 
                               ],
                             ),
+                          ],
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                        Text("Price",style: TextStyle(
+                            color: CupertinoColors.inactiveGray,
+                          fontSize: 15
+                          ),),
+                            SizedBox(
+                              height: 7,
+                            ),
+                            RichText(
+                              text: TextSpan(
+                                style: TextStyle(color: CupertinoColors.inactiveGray),
+                                children: [
+                                  TextSpan(text: "\$",style: TextStyle(
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 18,
+                                  )), // Escaping the dollar sign
+                                  TextSpan(text: price.toString(),style: TextStyle(
+                                    fontSize: 25,
+                                    color: Colors.white
+                                  )), // Ensure `price` is a String or convert it to one
+                                ],
+                              ),
+                            )
+                          ],
+                        )
+                      ],),
+                    ]:[
+                      RichText(
+                        text: TextSpan(
+                          style: TextStyle(
+                            fontWeight: FontWeight.w500,
                           ),
-                          SizedBox(
-                            height: 7,
-                          ),
+                          children: <TextSpan>[
+                            TextSpan(text: 'Mount Fuji, ',style: TextStyle(
+                                fontSize: 20
+                            )),
+                            TextSpan(
+                              text: 'Tokyo',
+                              style: TextStyle(
+                                  fontSize: 17,
+                                  color: CupertinoColors.inactiveGray
+                              ),
+                            ),
+
+
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 7,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
                           Row(
                             children: [
                               Icon(LineIcons.mapMarker,color: CupertinoColors.inactiveGray,),
@@ -117,69 +188,11 @@ splash_text(String txt){
 
                             ],
                           ),
-                        ],
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                      Text("Price",style: TextStyle(
-                        color: CupertinoColors.inactiveGray
-                        ),),
-                          RichText(
-                            text: TextSpan(
-                              style: TextStyle(color: CupertinoColors.inactiveGray),
-                              children: [
-                                TextSpan(text: "\$"), // Escaping the dollar sign
-                                TextSpan(text: price.toString()), // Ensure `price` is a String or convert it to one
-                              ],
-                            ),
-                          )
+                          Icon(Icons.star_border_purple500_sharp, color: CupertinoColors.inactiveGray,)
                         ],
                       )
-                    ],),
-                  ]:[
-                    RichText(
-                      text: TextSpan(
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                        ),
-                        children: <TextSpan>[
-                          TextSpan(text: 'Mount Fuji, ',style: TextStyle(
-                              fontSize: 20
-                          )),
-                          TextSpan(
-                            text: 'Tokyo',
-                            style: TextStyle(
-                                fontSize: 17,
-                                color: CupertinoColors.inactiveGray
-                            ),
-                          ),
-
-
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      height: 7,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            Icon(LineIcons.mapMarker,color: CupertinoColors.inactiveGray,),
-                            SizedBox(width: 5,),
-                            Text("description",style: TextStyle(
-                                color: CupertinoColors.inactiveGray
-                            ),),
-
-
-                          ],
-                        ),
-                        Icon(Icons.star_border_purple500_sharp, color: CupertinoColors.inactiveGray,)
-                      ],
-                    )
-                  ]
+                    ]
+                  ),
                 )),
           )
         ],

@@ -7,6 +7,8 @@ class destination_info extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var _width=MediaQuery.of(context).size.width;
+    var _height=MediaQuery.of(context).size.height;
     return SafeArea(
       child: Scaffold(
       body: Center(
@@ -17,8 +19,35 @@ class destination_info extends StatelessWidget {
                    padding: EdgeInsets.only(bottom: 10),
                    child: destination_card(CupertinoIcons.heart, CupertinoIcons.back,  null, null,null,200)),
                  ),
-             Expanded(flex: 3,child: Container(color: Colors.red,)),
-             Expanded(flex: 1,child: Container(color: Colors.green,))
+             Expanded(flex: 3,
+                 child: Padding(
+                   padding: const EdgeInsets.all(10),
+                   child: Column(
+                     children: [
+                      Row(
+                         children: [
+                           Text("Overview",style: TextStyle(
+                       fontSize: _width*0.06,
+                       fontWeight: FontWeight.w500,
+                       color: Colors.black)),
+                           SizedBox(
+                             width: _width*0.15,
+                           ),
+                           Text("Details",style: TextStyle(
+                               fontSize: _width*0.048,
+                               fontWeight: FontWeight.w700,
+                               color:CupertinoColors.inactiveGray),),
+
+                         ],
+                      )
+                     ],
+                   ),
+                 )),
+
+             Expanded(flex: 1,child: Padding(
+               padding: const EdgeInsets.all(10),
+               child: Container(color: Colors.green,),
+             ))
            ],
         ),
       )
