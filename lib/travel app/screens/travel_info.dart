@@ -25,21 +25,51 @@ class destination_info extends StatelessWidget {
                    child: Column(
                      children: [
                       Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
                          children: [
                            Text("Overview",style: TextStyle(
                        fontSize: _width*0.06,
                        fontWeight: FontWeight.w500,
                        color: Colors.black)),
                            SizedBox(
-                             width: _width*0.15,
+                             width: _width*0.13,
                            ),
                            Text("Details",style: TextStyle(
-                               fontSize: _width*0.048,
-                               fontWeight: FontWeight.w700,
-                               color:CupertinoColors.inactiveGray),),
+                               fontSize: _width*0.045,
+                               fontWeight: FontWeight.w500,
+                               color:Colors.black.withOpacity(0.5)),),
 
                          ],
-                      )
+                      ),
+                       SizedBox(
+                         height: _height*0.01,
+                       ),
+                       Row(
+                         children: [
+                           Row(
+
+                             children: [
+                               Container(
+                                   child: Icon(Icons.access_time),
+
+                               padding: EdgeInsets.all(2),
+                               decoration: BoxDecoration(
+                                 borderRadius: BorderRadius.circular(5),
+                                 color:Colors.black.withOpacity(0.2)
+                               ),),
+                               SizedBox(
+                                 width: _width*0.01,
+                               ),
+                               Text("8 Hours",style: TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                 color:Colors.black.withOpacity(0.5)
+                               ),)
+
+                             ],
+                           )
+                         ],
+                       )
+
                      ],
                    ),
                  )),
