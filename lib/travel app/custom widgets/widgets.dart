@@ -78,8 +78,9 @@ splash_text(String txt){
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: price!=null?[
-                    Row(children: [
+                    Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [
                       Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           RichText(
                             text: TextSpan(
@@ -119,6 +120,7 @@ splash_text(String txt){
                         ],
                       ),
                       Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                       Text("Price",style: TextStyle(
                         color: CupertinoColors.inactiveGray
@@ -132,7 +134,6 @@ splash_text(String txt){
                               ],
                             ),
                           )
-
                         ],
                       )
                     ],),

@@ -15,7 +15,7 @@ class destination_info extends StatelessWidget {
              Expanded(flex: 6,
                  child: Padding(
                    padding: EdgeInsets.only(bottom: 10),
-                   child: destination_card(CupertinoIcons.heart, CupertinoIcons.back,  null, null,null,null)),
+                   child: destination_card(CupertinoIcons.heart, CupertinoIcons.back,  null, null,null,200)),
                  ),
              Expanded(flex: 3,child: Container(color: Colors.red,)),
              Expanded(flex: 1,child: Container(color: Colors.green,))
