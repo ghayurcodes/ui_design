@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:provider/provider.dart';
@@ -179,7 +180,7 @@ class _home_screenState extends State<home_screen> {
                   enableInfiniteScroll: false,
                   enlargeCenterPage: true,
                   initialPage: 1,
-                  scrollPhysics: BouncingScrollPhysics()
+                  scrollPhysics: BouncingScrollPhysics(),
 
 
                 ),
@@ -187,7 +188,7 @@ class _home_screenState extends State<home_screen> {
                 items: [1,2,3,4,5].map((i) {
                   return Builder(
                     builder: (BuildContext context) {
-                      return destination_card();
+                      return destination_card(right: CupertinoIcons.heart, left: CupertinoIcons.heart, right_icon_on_tap: (){}, price: 233);
                     },
                   );
                 }).toList(),
