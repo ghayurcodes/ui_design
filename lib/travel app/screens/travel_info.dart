@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:line_icons/line_icons.dart';
 import 'package:ui_design/travel%20app/custom%20widgets/widgets.dart';
 
 class destination_info extends StatelessWidget {
-  const destination_info({super.key});
+  final int index;
+   destination_info({super.key, required this.index});
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +17,15 @@ class destination_info extends StatelessWidget {
         child: Column(
            children: [
              Expanded(flex: 6,
-                 child: Padding(
-                   padding: EdgeInsets.only(bottom: 10),
-                   child: destination_card(CupertinoIcons.heart, CupertinoIcons.back,  null, null,null,200)),
+                 child: Hero(
+                   tag: index,
+                   child: Padding(
+                     padding: EdgeInsets.only(bottom: 10),
+                     child: destination_card(CupertinoIcons.heart, CupertinoIcons.back,  null, (){
+                       Navigator.pop(context);
+                       print('clicked');
+                     },null,200,40.0)),
+                 ),
                  ),
              Expanded(flex: 3,
                  child: Padding(
@@ -41,34 +49,95 @@ class destination_info extends StatelessWidget {
 
                          ],
                       ),
-                       SizedBox(
-                         height: _height*0.01,
+                       Padding(
+                         padding: const EdgeInsets.symmetric(vertical: 17,horizontal: 10),
+                         child: Row(
+                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                           children: [
+                             Row(
+
+                               children: [
+                                 Container(
+                                     child: Icon(CupertinoIcons.clock_fill,color: Color(0xff1b1b1b),),
+
+                                 padding: EdgeInsets.all(2),
+                                 decoration: BoxDecoration(
+                                   borderRadius: BorderRadius.circular(5),
+                                   color:Colors.black.withOpacity(0.2)
+                                 ),),
+                                 SizedBox(
+                                   width: _width*0.01,
+                                 ),
+                                 Text("8 Hours",style: TextStyle(
+                                    fontWeight: FontWeight.w700,
+                                   color:Colors.black.withOpacity(0.5)
+                                 ),)
+
+                               ],
+                             ),
+                             Row(
+
+                               children: [
+                                 Container(
+                                   child: Icon(CupertinoIcons.cloud_fill,color: Color(0xff1b1b1b),),
+
+                                   padding: EdgeInsets.all(2),
+                                   decoration: BoxDecoration(
+                                       borderRadius: BorderRadius.circular(5),
+                                       color:Colors.black.withOpacity(0.2)
+                                   ),),
+                                 SizedBox(
+                                   width: _width*0.01,
+                                 ),
+                                 Text("16 °C",style: TextStyle(
+                                     fontWeight: FontWeight.w700,
+                                     color:Colors.black.withOpacity(0.5)
+                                 ),)
+
+                               ],
+                             ),
+                             Row(
+
+                               children: [
+                                 Container(
+                                   child: Icon(CupertinoIcons.star_fill,color: Color(0xff1b1b1b),),
+
+                                   padding: EdgeInsets.all(2),
+                                   decoration: BoxDecoration(
+                                       borderRadius: BorderRadius.circular(5),
+                                       color:Colors.black.withOpacity(0.2)
+                                   ),),
+                                 SizedBox(
+                                   width: _width*0.01,
+                                 ),
+                                 Text("4.6",style: TextStyle(
+                                     fontWeight: FontWeight.w700,
+                                     color:Colors.black.withOpacity(0.5)
+                                 ),)
+
+                               ],
+                             ),
+
+                           ],
+                         ),
                        ),
-                       Row(
-                         children: [
-                           Row(
+                       Expanded(
+                         child: SingleChildScrollView(
+                           child: Text(
+                               'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices at diam lectus nullam. '
+                                   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices at diam lectus nullam.'
+                                   'Lorem ipsum dolor ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices at diam lectus nullam. '
+                                   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices at diam lectus nullam.'
+                                   'Lorem ipsum dolor sit amet, consectetur adsit amet, consectetur adipiscing elit.'
+                                   ' Suspendisse ultrices at diam lectus nullam.',
+                           style: TextStyle(
+                             color: Color(0xff7b7b7b).withOpacity(0.8),
+                             fontSize: 16,
+                             fontWeight: FontWeight.w600
+                           ),),
 
-                             children: [
-                               Container(
-                                   child: Icon(Icons.access_time),
-
-                               padding: EdgeInsets.all(2),
-                               decoration: BoxDecoration(
-                                 borderRadius: BorderRadius.circular(5),
-                                 color:Colors.black.withOpacity(0.2)
-                               ),),
-                               SizedBox(
-                                 width: _width*0.01,
-                               ),
-                               Text("8 Hours",style: TextStyle(
-                                  fontWeight: FontWeight.w700,
-                                 color:Colors.black.withOpacity(0.5)
-                               ),)
-
-                             ],
-                           )
-                         ],
-                       )
+                         ),
+                       ),
 
                      ],
                    ),
@@ -76,7 +145,28 @@ class destination_info extends StatelessWidget {
 
              Expanded(flex: 1,child: Padding(
                padding: const EdgeInsets.all(10),
-               child: Container(color: Colors.green,),
+               child: Container(
+                 margin: EdgeInsets.symmetric(horizontal: 10),
+               decoration: BoxDecoration(
+                 color: Colors.black,
+                 borderRadius:  BorderRadius.circular(20),
+
+               ),
+                 child: Center(
+                   child: Row(
+                     mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("Book Now ",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 22
+                        ),),
+                        Icon(LineIcons.telegramPlane,color: Colors.white,)
+                      ],
+                   ),
+                 ),
+               ),
              ))
            ],
         ),

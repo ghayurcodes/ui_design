@@ -21,12 +21,14 @@ splash_text(String txt){
 
 
 
-  destination_card(var right,
+  destination_card(
+      var right,
       var left,
       var right_icon_on_tap,
       var left_on_tap,
       var ontap,
-      var price){
+      var price,
+      var edgeround){
   return GestureDetector(
     onTap: ontap,
     child: Container(
@@ -39,7 +41,7 @@ splash_text(String txt){
                     image: NetworkImage('https://burst.shopifycdn.com/photos/hiker-looks-up-at-vertical-mountain-peaks.jpg?width=1000&format=pjpg&exif=0&iptc=0'),
                     fit: BoxFit.cover
                 ),
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(edgeround),
                 boxShadow: [
                   BoxShadow(
                       blurRadius: 3,
@@ -64,9 +66,12 @@ splash_text(String txt){
             Positioned(
             top: 10,
             left : 10,
-            child: BlurryContainer(
-              child: Icon(left,color: CupertinoColors.white,size: 30,),
-              color: CupertinoColors.black.withOpacity(0.4),
+            child: GestureDetector(
+              child: BlurryContainer(
+                child: Icon(left,color: CupertinoColors.white,size: 30,),
+                color: CupertinoColors.black.withOpacity(0.4),
+              ),
+              onTap: left_on_tap,
             ),
           ):Container(),
           Positioned(

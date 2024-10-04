@@ -189,9 +189,10 @@ class _home_screenState extends State<home_screen> {
                 items: [1,2,3,4,5].map((i) {
                   return Builder(
                     builder: (BuildContext context) {
-                      return destination_card(CupertinoIcons.heart, null,  null, null,(){
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => destination_info(),));
-                      },null);
+                      return Hero(tag: i, child: destination_card(CupertinoIcons.heart, null,  null, null,(){
+                        //ontap fucntion
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => destination_info(index: i,),));
+                      },null,20.0));
                     },
                   );
                 }).toList(),
