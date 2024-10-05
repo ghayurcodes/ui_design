@@ -31,7 +31,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       bottomNavigationBar: Container(
-        color: Colors.greenAccent,
         padding: EdgeInsets.symmetric(horizontal: 20),
         height: _height*0.08,
         child: GNav(

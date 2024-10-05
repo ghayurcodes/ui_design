@@ -36,7 +36,7 @@ class profile extends StatelessWidget {
                                  color: Colors.black.withOpacity(0.5),
                                spreadRadius: 1,
                                 blurRadius: 5,
-                                offset: Offset(0, -1)
+                                offset: Offset(0, -10)
 
                               ),
                             ]
@@ -104,9 +104,7 @@ class profile extends StatelessWidget {
                            endIndent: 30,
                            color: Colors.black.withAlpha(50),
                          ),
-                         SizedBox(
-                           height: _height*0.02,
-                         ),
+
                          Row(
                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                            children: [
@@ -133,6 +131,15 @@ class profile extends StatelessWidget {
 
                            ],
                          ),
+                         SizedBox(
+                           height: _height*0.02,
+                         ),
+                         profile_box("Change Password", Icons.lock, Colors.black.withOpacity(0.9), Colors.white,),
+                         SizedBox(
+                           height: _height*0.02,
+                         ),
+                         profile_box("Logout", Icons.output_rounded, Colors.white, Colors.redAccent),
+
 
 
                        ],

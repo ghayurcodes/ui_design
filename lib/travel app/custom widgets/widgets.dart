@@ -19,9 +19,6 @@ splash_text(String txt){
 }
 
 
-
-
-
   destination_card(
       var right,
       var left,
@@ -243,6 +240,39 @@ splash_text(String txt){
   );
   }
 
+
+  profile_box(String txt, icon,color1,color2){
+
+  return Container(
+    decoration: BoxDecoration(
+       borderRadius:  BorderRadius.circular(25),
+      color: color1,
+        border: Border.all(
+          color: color2,
+          width: 1
+        )
+    ),
+    padding: EdgeInsets.all(10),
+    child: Center(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(txt,style:
+            TextStyle(
+                color: color2,
+                fontWeight: FontWeight.w700,
+                fontSize: 25
+          
+          ),),
+          SizedBox(
+            width: 10,
+          ),
+          Icon(icon,color: color2,)
+        ],
+      ),
+    ),
+  );
+  }
 
 
 
