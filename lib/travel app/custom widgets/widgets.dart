@@ -211,19 +211,17 @@ splash_text(String txt){
 
   textbox(String name){
 
-  return Container(
-    decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(30),
+  return TextField(
+    maxLines: 1,
+     decoration:  InputDecoration(
+       border: InputBorder.none,
+       fillColor: Colors.grey,
+        filled: true,
+       contentPadding: EdgeInsets.all(8),
+       hintText: name,
+         
 
-      color: Colors.red
-    ),
-    child: TextField(
-      maxLines: 1,
-       decoration:  InputDecoration(
-         border: InputBorder.none
-           
-       ),
-    ),
+     ),
   );
   }
 
