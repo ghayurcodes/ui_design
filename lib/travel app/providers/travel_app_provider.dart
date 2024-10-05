@@ -3,6 +3,14 @@ import 'package:provider/provider.dart';
 
 class home_provider with ChangeNotifier{
   int _selectedIndex = 0;
+
+
+
+
+
+
+
+  
   int get selectedindex=>_selectedIndex;
 
   void set_selected_category(int index){

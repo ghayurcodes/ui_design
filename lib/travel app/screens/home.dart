@@ -75,7 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
           },
         ),
       ),
-      body: screens[main], // Use the updated value of main to display the correct screen
+      body: Consumer<>(builder: (context, value, child) => screens[main],), // Use the updated value of main to display the correct screen
     );
   }
 }

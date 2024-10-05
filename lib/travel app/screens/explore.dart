@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:ui_design/travel%20app/screens/travel_info.dart';
-
 import '../custom widgets/widgets.dart';
 import '../providers/travel_app_provider.dart';
 
@@ -52,8 +51,8 @@ class explore_page extends StatelessWidget {
                   ),
                   CircleAvatar(
                     radius: 30,
-                    backgroundImage: NetworkImage(
-                        "https://www.shutterstock.com/image-photo/passport-photo-portrait-woman-on-260nw-2438031869.jpg"),
+                    // backgroundImage: NetworkImage(
+                    //     "https://www.shutterstock.com/image-photo/passport-photo-portrait-woman-on-260nw-2438031869.jpg"),
                   ),
                 ],
               ),
