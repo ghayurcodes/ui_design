@@ -7,8 +7,25 @@ class profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
-          color: Colors.blue,
-          child: Center(child: Text('profile')),
+          color: Colors.grey,
+          child: Center(child:Column(
+            children: [
+              Expanded(
+                flex: 4,
+                child: Container(
+                  color: Colors.orange,
+
+                ),
+              ),
+              Expanded(
+                flex:8,
+                child: Container(
+                  color: Colors.yellowAccent,
+
+                ),
+              )
+            ],
+          )),
         ),
     );
 
