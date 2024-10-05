@@ -111,7 +111,7 @@ class profile extends StatelessWidget {
                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                            children: [
                              Text("Birth",style: TextStyle(
-                                 color: Colors.black.withAlpha(150),
+                                 color: Colors.black.withAlpha(100),
                                  fontWeight: FontWeight.w600,
                                  fontSize: 20
                              ),),
@@ -124,7 +124,7 @@ class profile extends StatelessWidget {
                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                            children: [
                              Text("Gender",style: TextStyle(
-                                 color: Colors.black.withAlpha(150),
+                                 color: Colors.black.withAlpha(100),
                                  fontWeight: FontWeight.w600,
                                  fontSize: 20
                              ),),
