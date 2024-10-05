@@ -197,7 +197,6 @@ class explore_page extends StatelessWidget {
                               CupertinoIcons.heart,
                               null,
                               i,
-
                               null, () {
                             Navigator.push(
                                 context,

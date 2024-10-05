@@ -58,21 +58,18 @@ splash_text(String txt){
           Positioned(
             top: 10,
             right: 10,
-            child: GestureDetector(
-              onTap: (){
-                value.add_fav(right_icon_on_tap);
-              },
-              child: BlurryContainer(
-                color: CupertinoColors.black.withOpacity(0.4),
-                child: Consumer<home_provider>(
-                  builder: (context, value, child) {
-
-                    return  value.favs.contains(right_icon_on_tap)?Icon( CupertinoIcons.heart_fill,color: Colors.red,size: 30,):
-                    Icon(right,color: CupertinoColors.white,size: 30,);
-                  },
-                )
-              ),
-            ),
+            child: Consumer<home_provider>(builder: (context, value, child) {
+              return GestureDetector(
+                onTap: (){
+                  value.add_fav(right_icon_on_tap);
+                },
+                child: BlurryContainer(
+                    color: CupertinoColors.black.withOpacity(0.4),
+                    child: value.favs.contains(right_icon_on_tap)?Icon( CupertinoIcons.heart_fill,color: Colors.red,size: 30,):
+                    Icon(right,color: CupertinoColors.white,size: 30,)
+                ),
+              );
+            },),
           ),
             left!=null?
             Positioned(
