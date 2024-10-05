@@ -6,6 +6,7 @@ import 'package:blurrycontainer/blurrycontainer.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 
+
 splash_text(String txt){
 
   return Text(txt,style:TextStyle(
@@ -36,9 +37,8 @@ splash_text(String txt){
       child: Stack(
         children: [
           Container(
-
             decoration: BoxDecoration(
-                color: Colors.greenAccent,
+              color: Colors.red,
                 // image: DecorationImage(
                 //     image: NetworkImage('https://burst.shopifycdn.com/photos/hiker-looks-up-at-vertical-mountain-peaks.jpg?width=1000&format=pjpg&exif=0&iptc=0'),
                 //     fit: BoxFit.cover
@@ -207,6 +207,26 @@ splash_text(String txt){
     ),
   );
   }
+
+
+  textbox(String name){
+
+  return Container(
+    decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(30),
+
+      color: Colors.red
+    ),
+    child: TextField(
+      maxLines: 1,
+       decoration:  InputDecoration(
+         border: InputBorder.none
+           
+       ),
+    ),
+  );
+  }
+
 
 
 

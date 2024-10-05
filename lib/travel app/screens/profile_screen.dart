@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_design/travel%20app/custom%20widgets/widgets.dart';
 
 class profile extends StatelessWidget {
   const profile({super.key});
@@ -11,22 +12,42 @@ class profile extends StatelessWidget {
 
     return SafeArea(
       child: Container(
-          color: Colors.grey,
+          color: Colors.white,
           child: Center(child:Column(
             children: [
               Expanded(
-                flex: 4,
+                flex: 3,
                 child: Container(
-                  color: Colors.orange,
                   child: Stack(
                     children: [
                       Container(
-                        color: Colors.red,
+                        color: Colors.lightBlueAccent,
                       ),
                       Positioned(
+                        bottom: 0,
                         child: Container(
-                          color:Colors.pinkAccent,
-                          height: _height*0.1,
+                          height: _height*0.09,
+                          width: _width,
+                          decoration: BoxDecoration(
+                            color:Colors.white,
+                              borderRadius: BorderRadius.only(topLeft:  Radius.circular(40),topRight: Radius.circular(40)),
+                            boxShadow: [
+                              BoxShadow(
+                                 color: Colors.black.withOpacity(0.5),
+                               spreadRadius: 1,
+                                blurRadius: 5,
+                                offset: Offset(0, -1)
+
+                              ),
+                            ]
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                         bottom: _height*0.04,
+                        right: 140,
+                        child: CircleAvatar(
+                          radius: 60,
                         ),
                       )
                     ],
@@ -37,7 +58,20 @@ class profile extends StatelessWidget {
               Expanded(
                 flex:8,
                 child: Container(
-                  color: Colors.yellowAccent,
+                  padding: EdgeInsets.only(right: 25,left: 25),
+                  child: Center(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                       children: [
+                         Text("First Name",style: TextStyle(
+                             color: Colors.black.withAlpha(150),
+                             fontWeight: FontWeight.w600,
+                             fontSize: 18
+                         ),),
+                         textbox("Testing")
+                       ],
+                    ),
+                  ),
 
                 ),
               )
