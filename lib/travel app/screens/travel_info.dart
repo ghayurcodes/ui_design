@@ -23,7 +23,6 @@ class destination_info extends StatelessWidget {
                      padding: EdgeInsets.only(bottom: 10),
                      child: destination_card(CupertinoIcons.heart, CupertinoIcons.back,  null, (){
                        Navigator.pop(context);
-                       print('clicked');
                      },null,200,40.0)),
                  ),
                  ),

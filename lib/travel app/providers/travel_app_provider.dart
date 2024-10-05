@@ -19,6 +19,8 @@ class home_provider with ChangeNotifier {
     profile()
   ];
 
+  List<int> favs=[];
+
   int get selectedindex => _selectedIndex;
 
   void set_selected_category(int index) {
@@ -33,4 +35,16 @@ class home_provider with ChangeNotifier {
     notifyListeners();
   }
 
+
+  void add_fav(int index){
+
+    if(favs.contains(index)){
+      favs.remove(index);
+    }
+    else{
+      favs.add(index);
+    }
+    notifyListeners();
+
+  }
 }

@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:line_icons/line_icon.dart';
 import 'package:provider/provider.dart';
 import 'package:ui_design/travel%20app/screens/travel_info.dart';
 
@@ -195,7 +196,8 @@ class explore_page extends StatelessWidget {
                           child: destination_card(
                               CupertinoIcons.heart,
                               null,
-                              null,
+                              i,
+
                               null, () {
                             Navigator.push(
                                 context,

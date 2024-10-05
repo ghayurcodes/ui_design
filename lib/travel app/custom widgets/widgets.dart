@@ -5,6 +5,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:blurrycontainer/blurrycontainer.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:provider/provider.dart';
+import 'package:ui_design/travel%20app/providers/travel_app_provider.dart';
 
 
 splash_text(String txt){
@@ -58,7 +60,12 @@ splash_text(String txt){
             right: 10,
             child: BlurryContainer(
               color: CupertinoColors.black.withOpacity(0.4),
-              child: Icon(right,color: CupertinoColors.white,size: 30,),
+              child: Consumer<home_provider>(
+                builder: (context, value, child) {
+                  return  value.favs.contains(right_icon_on_tap)?Icon( CupertinoIcons.heart_fill,color: Colors.red,size: 30,):
+                  Icon(right,color: CupertinoColors.white,size: 30,);
+                },
+              )
             ),
           ),
             left!=null?
