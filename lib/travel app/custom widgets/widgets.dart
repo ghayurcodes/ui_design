@@ -215,11 +215,17 @@ splash_text(String txt){
     maxLines: 1,
      decoration:  InputDecoration(
        border: InputBorder.none,
-       fillColor: Colors.grey,
-        filled: true,
        contentPadding: EdgeInsets.all(8),
        hintText: name,
-         
+       focusedBorder:  OutlineInputBorder(
+         borderSide: BorderSide(
+           width: 2,
+           color: Colors.black.withAlpha(150),
+           
+         ),
+         borderRadius: BorderRadius.circular(25)
+       )
+
 
      ),
   );
