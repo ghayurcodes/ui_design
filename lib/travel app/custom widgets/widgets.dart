@@ -213,18 +213,30 @@ splash_text(String txt){
 
   return TextField(
     maxLines: 1,
+      cursorColor: Colors.black,
      decoration:  InputDecoration(
        border: InputBorder.none,
-       contentPadding: EdgeInsets.all(8),
+       contentPadding: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
        hintText: name,
+       hintStyle:  TextStyle(
+         color: Colors.black,
+         fontWeight: FontWeight.w700
+       ),
        focusedBorder:  OutlineInputBorder(
          borderSide: BorderSide(
            width: 2,
-           color: Colors.black.withAlpha(150),
-           
+           color: Colors.black.withAlpha(100),
          ),
          borderRadius: BorderRadius.circular(25)
+       ),
+       enabledBorder: OutlineInputBorder(
+           borderSide: BorderSide(
+             width: 2,
+             color: Colors.black.withAlpha(100),
+           ),
+           borderRadius: BorderRadius.circular(25)
        )
+
 
 
      ),

@@ -58,7 +58,7 @@ class profile extends StatelessWidget {
               Expanded(
                 flex:8,
                 child: Container(
-                  padding: EdgeInsets.only(right: 25,left: 25),
+                  padding: EdgeInsets.only(right: 30,left: 30),
                   child: Center(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -68,7 +68,73 @@ class profile extends StatelessWidget {
                              fontWeight: FontWeight.w600,
                              fontSize: 18
                          ),),
-                         textbox("Testing")
+                         SizedBox(
+                           height: _height*0.02,
+                         ),
+                         textbox("Testing"),
+                         SizedBox(
+                           height: _height*0.02,
+                         ),
+                         Text("Last Name",style: TextStyle(
+                             color: Colors.black.withAlpha(150),
+                             fontWeight: FontWeight.w600,
+                             fontSize: 18
+                         ),),
+                         SizedBox(
+                           height: _height*0.02,
+                         ),
+                         textbox("Testing"),
+                         SizedBox(
+                           height: _height*0.02,
+                         ),
+                         Text("Email",style: TextStyle(
+                             color: Colors.black.withAlpha(150),
+                             fontWeight: FontWeight.w600,
+                             fontSize: 18
+                         ),),
+                         SizedBox(
+                           height: _height*0.02,
+                         ),
+                         textbox("Testing"),
+                         SizedBox(
+                           height: _height*0.02,
+                         ),
+                         Divider(
+                            indent: 30,
+                           endIndent: 30,
+                           color: Colors.black.withAlpha(50),
+                         ),
+                         SizedBox(
+                           height: _height*0.02,
+                         ),
+                         Row(
+                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                           children: [
+                             Text("Birth",style: TextStyle(
+                                 color: Colors.black.withAlpha(150),
+                                 fontWeight: FontWeight.w600,
+                                 fontSize: 20
+                             ),),
+                             Icon(Icons.navigate_next_rounded,size: 35,color: Colors.black.withAlpha(150),)
+                             
+
+                           ],
+                         ),
+                         Row(
+                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                           children: [
+                             Text("Gender",style: TextStyle(
+                                 color: Colors.black.withAlpha(150),
+                                 fontWeight: FontWeight.w600,
+                                 fontSize: 20
+                             ),),
+                             Icon(Icons.navigate_next_rounded,size: 35,color: Colors.black.withAlpha(150),)
+
+
+                           ],
+                         ),
+
+
                        ],
                     ),
                   ),

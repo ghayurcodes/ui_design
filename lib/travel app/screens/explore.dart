@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:ui_design/travel%20app/screens/travel_info.dart';
+
 import '../custom widgets/widgets.dart';
 import '../providers/travel_app_provider.dart';
 
