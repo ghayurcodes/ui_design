@@ -142,7 +142,6 @@ class destination_info extends StatelessWidget {
                      ],
                    ),
                  )),
-
              Expanded(flex: 1,child: Padding(
                padding: const EdgeInsets.all(10),
                child: Container(

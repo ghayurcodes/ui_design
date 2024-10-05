@@ -20,7 +20,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int main = 0;
+
 
   @override
   Widget build(BuildContext context) {
@@ -28,20 +28,10 @@ class _HomeScreenState extends State<HomeScreen> {
     var _height = MediaQuery.of(context).size.height;
     var provider = Provider.of<home_provider>(context, listen: false);
 
-    var screens = [
-     explore_page(),
-     Container(
-       color: Colors.red,
-       child: Center(
-         child: Text('Liks'),
-       ),),
-      profile()
-
-    ];
 
     return Scaffold(
       bottomNavigationBar: Container(
-        color: Colors.red,
+        color: Colors.greenAccent,
         padding: EdgeInsets.symmetric(horizontal: 20),
         height: _height*0.08,
         child: GNav(
@@ -68,14 +58,13 @@ class _HomeScreenState extends State<HomeScreen> {
               text: 'Profile',
             ),
           ],
-          onTabChange: (value) {
-            setState(() {
-              main = value; // Update main and trigger a rebuild
-            });
+          onTabChange: (val) {
+            provider.chose_screen(val);
+
           },
         ),
       ),
-      body: Consumer<>(builder: (context, value, child) => screens[main],), // Use the updated value of main to display the correct screen
+      body: Consumer<home_provider>(builder: (context, value, child) => value.screens[value.selected_screen],),
     );
   }
 }
