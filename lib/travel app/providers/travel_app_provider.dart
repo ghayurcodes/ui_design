@@ -19,7 +19,7 @@ class home_provider with ChangeNotifier {
     ),
     Profile()
   ];
-
+  var options=["Most Viewed","Nearby","Latest","Popular","Adventure"];
   List<int> favs=[];
 
   int get selectedindex => _selectedIndex;
