@@ -37,11 +37,11 @@ splash_text(String txt){
         children: [
           Container(
             decoration: BoxDecoration(
-              color: Colors.red,
-                // image: DecorationImage(
-                //     image: NetworkImage('https://burst.shopifycdn.com/photos/hiker-looks-up-at-vertical-mountain-peaks.jpg?width=1000&format=pjpg&exif=0&iptc=0'),
-                //     fit: BoxFit.cover
-                // ),
+
+                image: DecorationImage(
+                    image: NetworkImage('https://burst.shopifycdn.com/photos/hiker-looks-up-at-vertical-mountain-peaks.jpg?width=1000&format=pjpg&exif=0&iptc=0'),
+                    fit: BoxFit.cover
+                ),
                 borderRadius: BorderRadius.circular(edgeround),
                 boxShadow: [
                   BoxShadow(

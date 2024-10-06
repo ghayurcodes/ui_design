@@ -53,8 +53,8 @@ class explore_page extends StatelessWidget {
                   ),
                   CircleAvatar(
                     radius: 30,
-                    // backgroundImage: NetworkImage(
-                    //     "https://www.shutterstock.com/image-photo/passport-photo-portrait-woman-on-260nw-2438031869.jpg"),
+                    backgroundImage: NetworkImage(
+                        "https://www.shutterstock.com/image-photo/passport-photo-portrait-woman-on-260nw-2438031869.jpg"),
                   ),
                 ],
               ),

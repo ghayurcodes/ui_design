@@ -16,7 +16,7 @@ class home_provider with ChangeNotifier {
         child: Text('Liks'),
       ),
     ),
-    profile()
+    Profile()
   ];
 
   List<int> favs=[];
