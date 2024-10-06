@@ -16,6 +16,7 @@ class explore_page extends StatelessWidget {
 
     var _width = MediaQuery.of(context).size.width;
     var _height = MediaQuery.of(context).size.height;
+    var value=Provider.of<home_provider>(context,listen: false);
 
     return SafeArea(
       child: Center(
@@ -122,52 +123,48 @@ class explore_page extends StatelessWidget {
               width: _width,
               height: _height * 0.08,
               padding: const EdgeInsets.symmetric(vertical: 5),
-              child: Consumer<home_provider>(
-                builder: (context, value, child) {
-                  return ListView.builder(
-                    itemCount: value.options.length,
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) {
-                      bool isSelected = index == value.selectedindex;
-
-                      return GestureDetector(
-                        onTap: () {
-                          value.set_selected_category(index);
-                        },
-                        child: Container(
-                          margin: const EdgeInsets.symmetric(
-                              horizontal: 10, vertical: 6),
-                          padding: const EdgeInsets.symmetric(horizontal: 30),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: isSelected
-                                ? const Color(0xff2f2f2f)
-                                : const Color(0xfffef7ff),
-                            boxShadow: isSelected
-                                ? [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.4),
-                                spreadRadius: 1,
-                                blurRadius: 3,
-                              ),
-                            ]
-                                : null,
+              child: ListView.builder(
+                itemCount: value.options.length,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  bool isSelected = index == value.selectedindex;
+              
+                  return GestureDetector(
+                    onTap: () {
+                      value.set_selected_category(index);
+                    },
+                    child: Container(
+                      margin: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 6),
+                      padding: const EdgeInsets.symmetric(horizontal: 30),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: isSelected
+                            ? const Color(0xff2f2f2f)
+                            : const Color(0xfffef7ff),
+                        boxShadow: isSelected
+                            ? [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.4),
+                            spreadRadius: 1,
+                            blurRadius: 3,
                           ),
-                          child: Center(
-                            child: Text(
-                              value.options.elementAt(index),
-                              style: TextStyle(
-                                color: isSelected
-                                    ? Colors.white
-                                    : Colors.black.withAlpha(100),
-                                fontWeight: FontWeight.w600,
-                                fontSize: 16,
-                              ),
-                            ),
+                        ]
+                            : null,
+                      ),
+                      child: Center(
+                        child: Text(
+                          value.options.elementAt(index),
+                          style: TextStyle(
+                            color: isSelected
+                                ? Colors.white
+                                : Colors.black.withAlpha(100),
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16,
                           ),
                         ),
-                      );
-                    },
+                      ),
+                    ),
                   );
                 },
               ),
@@ -188,7 +185,7 @@ class explore_page extends StatelessWidget {
                     initialPage: 1,
                     scrollPhysics: BouncingScrollPhysics(),
                   ),
-                  items: [1, 2, 3, 4, 5].map((i) {
+                  items: [0,1, 2, 3, 4, 5,6].map((i) {
                     return Builder(
                       builder: (BuildContext context) {
                         return Hero(
@@ -203,7 +200,13 @@ class explore_page extends StatelessWidget {
                                 MaterialPageRoute(
                                     builder: (context) =>
                                         destination_info(index: i)));
-                          }, null, 20.0),
+                          }, null, 20.0,
+                            value.wonder_images.elementAt(i),
+                            value.wondername1.elementAt(i),
+                            value.wondername2.elementAt(i),
+                            value.wonderdesc.elementAt(i),
+
+                          ),
                         );
                       },
                     );

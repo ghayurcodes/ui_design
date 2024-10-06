@@ -28,7 +28,12 @@ splash_text(String txt){
       var left_on_tap,
       var ontap,
       var price,
-      var edgeround){
+      var edgeround,
+      var image,
+      var nam1,
+      var name2,
+      var description
+      ){
   return GestureDetector(
     onTap: ontap,
     child: Container(
@@ -39,7 +44,7 @@ splash_text(String txt){
             decoration: BoxDecoration(
 
                 image: DecorationImage(
-                    image: NetworkImage('https://burst.shopifycdn.com/photos/hiker-looks-up-at-vertical-mountain-peaks.jpg?width=1000&format=pjpg&exif=0&iptc=0'),
+                    image: NetworkImage(image),
                     fit: BoxFit.cover
                 ),
                 borderRadius: BorderRadius.circular(edgeround),

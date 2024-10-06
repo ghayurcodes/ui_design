@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:provider/provider.dart';
 import 'package:ui_design/travel%20app/custom%20widgets/widgets.dart';
+
+import '../providers/travel_app_provider.dart';
 
 class destination_info extends StatelessWidget {
   final int index;
@@ -11,6 +14,8 @@ class destination_info extends StatelessWidget {
   Widget build(BuildContext context) {
     var _width=MediaQuery.of(context).size.width;
     var _height=MediaQuery.of(context).size.height;
+    var value=Provider.of<home_provider>(context,listen: false);
+
     return SafeArea(
       child: Scaffold(
       body: Center(
@@ -23,7 +28,11 @@ class destination_info extends StatelessWidget {
                      padding: EdgeInsets.only(bottom: 10),
                      child: destination_card(CupertinoIcons.heart, CupertinoIcons.back,  index, (){
                        Navigator.pop(context);
-                     },null,200,40.0)),
+                     },null,200,40.0,
+                       value.wonder_images.elementAt(index),
+                       value.wondername1.elementAt(index),
+                       value.wondername2.elementAt(index),
+                       value.wonderdesc.elementAt(index),)),
                  ),
                  ),
              Expanded(flex: 3,
