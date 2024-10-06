@@ -109,16 +109,9 @@ splash_text(String txt){
                                   fontWeight: FontWeight.w500,
                                 ),
                                 children: <TextSpan>[
-                                  TextSpan(text: 'Mount Fuji, ',style: TextStyle(
-                                      fontSize: 20
+                                  TextSpan(text: "$nam1 ",style: TextStyle(
+                                      fontSize: 19
                                   )),
-                                  TextSpan(
-                                    text: 'Tokyo',
-                                    style: TextStyle(
-                                        fontSize: 17,
-                                        color: CupertinoColors.inactiveGray
-                                    ),
-                                  ),
 
 
                                 ],
@@ -129,12 +122,14 @@ splash_text(String txt){
                             ),
                             Row(
                               children: [
-                                Icon(LineIcons.mapMarker,color: CupertinoColors.inactiveGray,),
                                 SizedBox(width: 5,),
-                                Text("description",style: TextStyle(
-                                    color: CupertinoColors.inactiveGray
-                                ),
-                                overflow: TextOverflow.fade,),
+                                Text(name2,
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      color: CupertinoColors.inactiveGray
+                                  ),
+                                overflow: TextOverflow.fade,
+                                maxLines: 1,),
 
 
                               ],
