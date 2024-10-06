@@ -24,7 +24,7 @@ class Profile extends StatelessWidget {
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: NetworkImage('https://img.freepik.com/free-vector/background-abstract-gradient-color-style_483537-3675.jpg'),
-                            fit: BoxFit.cover
+                            fit: BoxFit.fitWidth,
                           )
                         ),
                       ),
