@@ -39,6 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
           tabBorder: Border.all(color: Colors.white, width: 1),
           curve: Curves.ease,
           gap: 8,
+          duration: Duration(milliseconds: 100),
           activeColor: Colors.black,
           iconSize: 25,
           tabBackgroundColor: Colors.black.withOpacity(0.1),
