@@ -22,7 +22,8 @@ class home_provider with ChangeNotifier {
   List<int> favs=[];
   var options=["Most Viewed","Nearby","Latest","Popular","Adventure"];
   var wonder_images=["https://www.weirdosabroad.com/wp-content/uploads/2018/10/christ-the-redeemer-corcovado-brazil-e1538568170179.jpg",
-  ""];
+  "https://socialstudieshelp.com/wp-content/uploads/2024/03/The-Great-Wall-of-China-Beyond-the-Bricks.webp"
+  ,""];
 
 
   var wondername1=["CHRIST THE REDEEMER","Great Wall"];
