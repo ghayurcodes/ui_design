@@ -128,7 +128,8 @@ splash_text(String txt){
                                 SizedBox(width: 5,),
                                 Text("description",style: TextStyle(
                                     color: CupertinoColors.inactiveGray
-                                ),),
+                                ),
+                                overflow: TextOverflow.fade,),
 
 
                               ],
