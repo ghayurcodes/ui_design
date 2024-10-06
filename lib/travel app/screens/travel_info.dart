@@ -131,13 +131,7 @@ class destination_info extends StatelessWidget {
                        ),
                        Expanded(
                          child: SingleChildScrollView(
-                           child: Text(
-                               'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices at diam lectus nullam. '
-                                   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices at diam lectus nullam.'
-                                   'Lorem ipsum dolor ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices at diam lectus nullam. '
-                                   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices at diam lectus nullam.'
-                                   'Lorem ipsum dolor sit amet, consectetur adsit amet, consectetur adipiscing elit.'
-                                   ' Suspendisse ultrices at diam lectus nullam.',
+                           child: Text(value.wonderdesc[index],
                            style: TextStyle(
                              color: Color(0xff7b7b7b).withOpacity(0.8),
                              fontSize: 16,
