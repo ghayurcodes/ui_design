@@ -125,7 +125,7 @@ class explore_page extends StatelessWidget {
               child: Consumer<home_provider>(
                 builder: (context, value, child) {
                   return ListView.builder(
-                    itemCount: value.places.length,
+                    itemCount: value.options.length,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
                       bool isSelected = index == value.selectedindex;
@@ -155,7 +155,7 @@ class explore_page extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              value.places.elementAt(index),
+                              value.options.elementAt(index),
                               style: TextStyle(
                                 color: isSelected
                                     ? Colors.white

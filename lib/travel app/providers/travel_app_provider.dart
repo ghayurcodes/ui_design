@@ -19,8 +19,11 @@ class home_provider with ChangeNotifier {
     ),
     Profile()
   ];
-  var options=["Most Viewed","Nearby","Latest","Popular","Adventure"];
   List<int> favs=[];
+  var options=["Most Viewed","Nearby","Latest","Popular","Adventure"];
+  var wonder_images=["https://www.weirdosabroad.com/wp-content/uploads/2018/10/christ-the-redeemer-corcovado-brazil-e1538568170179.jpg",
+  ""]
+
 
   int get selectedindex => _selectedIndex;
 
