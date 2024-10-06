@@ -29,10 +29,10 @@ class home_provider with ChangeNotifier {
   ];
 
 
-  var wondername1=["CHRIST THE REDEEMER","Great Wall","Taj Mahal","Petra","Machu Picchu"];
+  var wondername1=["CHRIST THE REDEEMER","Great Wall","Taj Mahal","Petra","Machu Picchu","Chichen Itza",];
 
 
-  var wondername2=["Brazil","China","India","Jordan","Peru"];
+  var wondername2=["Brazil","China","India","Jordan","Peru","Mexico"];
 
 
   var wonderdesc=["In Portuguese, Christ the Redeemer is also known as the Cristo Redentor. It is a massive statue of Jesus Christ that stands atop Mount Corcovado in Rio de Janeiro, Brazil. Corcovado rises over Rio de Janeiro, Brazil’s Brazil’s main port city, immortalised in traditional and popular music. The Christ the Redeemer monument, which rises 98 feet (30 metres) tall with 92 feet of horizontal spread arms, was finished in 1931. (28 metres). The monument has become a symbol for both Rio de Janeiro and the whole country of Brazil.",
