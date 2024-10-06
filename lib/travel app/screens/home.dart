@@ -30,6 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
     return Scaffold(
+      resizeToAvoidBottomInset: false ,
       bottomNavigationBar: Container(
         padding: EdgeInsets.symmetric(horizontal: 20),
         height: _height*0.08,

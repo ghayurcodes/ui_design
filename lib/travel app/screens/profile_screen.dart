@@ -92,7 +92,7 @@ class Profile extends StatelessWidget {
                           ),
                         ),
                         SizedBox(height: _height * 0.02),
-                        textbox("Testing"),
+                        textbox("Parker"),
                         SizedBox(height: _height * 0.02),
                         Text(
                           "Email",
@@ -103,7 +103,7 @@ class Profile extends StatelessWidget {
                           ),
                         ),
                         SizedBox(height: _height * 0.02),
-                        textbox("Testing"),
+                        textbox("jenny123@gmail.com"),
                         SizedBox(height: _height * 0.02),
                         Divider(
                           indent: 30,

@@ -100,41 +100,36 @@ splash_text(String txt){
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: price!=null?[
                       Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            RichText(
-                              text: TextSpan(
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                ),
-                                children: <TextSpan>[
-                                  TextSpan(text: "$nam1 ",style: TextStyle(
-                                      fontSize: 19
-                                  )),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(nam1,style: TextStyle(
+                                fontSize: 23,fontWeight: FontWeight.w500,
+                                color: Colors.white
+                              )),
+                              SizedBox(
+                                height: 7,
+                              ),
+                              Row(
+                                children: [
+                                  Icon(LineIcons.mapMarker,color: CupertinoColors.inactiveGray,),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Text(name2,
+                                    style: TextStyle(
+                                        fontSize: 17,
+                                        color: CupertinoColors.inactiveGray
+                                    ),
+                                  overflow: TextOverflow.fade,
+                                  maxLines: 1,),
 
 
                                 ],
                               ),
-                            ),
-                            SizedBox(
-                              height: 7,
-                            ),
-                            Row(
-                              children: [
-                                SizedBox(width: 5,),
-                                Text(name2,
-                                  style: TextStyle(
-                                      fontSize: 17,
-                                      color: CupertinoColors.inactiveGray
-                                  ),
-                                overflow: TextOverflow.fade,
-                                maxLines: 1,),
-
-
-                              ],
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
@@ -165,21 +160,12 @@ splash_text(String txt){
                         )
                       ],),
                     ]:[
-                      RichText(
-                        text: TextSpan(
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                          ),
-                          children: <TextSpan>[
-                            TextSpan(text: '$nam1 ',style: TextStyle(
-                                fontSize: 20
-                            )),
-
-
-
-                          ],
-                        ),
-                      ),
+                      Text( nam1,
+                        style: TextStyle(
+                            fontSize: 23,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500
+                        ),),
                       SizedBox(
                         height: 7,
                       ),
@@ -188,6 +174,7 @@ splash_text(String txt){
                         children: [
                           Row(
                             children: [
+                              Icon(LineIcons.mapMarker,color: CupertinoColors.inactiveGray,),
                               SizedBox(width: 5,),
                               Text( name2,
                                 style: TextStyle(

@@ -28,7 +28,7 @@ class destination_info extends StatelessWidget {
                      padding: EdgeInsets.only(bottom: 10),
                      child: destination_card(CupertinoIcons.heart, CupertinoIcons.back,  index, (){
                        Navigator.pop(context);
-                     },null,200,40.0,
+                     },null,null,40.0,
                        value.wonder_images.elementAt(index),
                        value.wondername1.elementAt(index),
                        value.wondername2.elementAt(index),
