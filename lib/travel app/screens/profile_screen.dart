@@ -80,7 +80,7 @@ class Profile extends StatelessWidget {
                             fontSize: 18,
                           ),
                         ),
-                        SizedBox(height: _height * 0.02),
+                        SizedBox(height: _height * 0.01),
                         textbox("Jenny"),
                         SizedBox(height: _height * 0.02),
                         Text(
@@ -91,7 +91,7 @@ class Profile extends StatelessWidget {
                             fontSize: 18,
                           ),
                         ),
-                        SizedBox(height: _height * 0.02),
+                        SizedBox(height: _height * 0.01),
                         textbox("Parker"),
                         SizedBox(height: _height * 0.02),
                         Text(
@@ -102,7 +102,7 @@ class Profile extends StatelessWidget {
                             fontSize: 18,
                           ),
                         ),
-                        SizedBox(height: _height * 0.02),
+                        SizedBox(height: _height * 0.01),
                         textbox("jenny123@gmail.com"),
                         SizedBox(height: _height * 0.02),
                         Divider(
@@ -141,19 +141,21 @@ class Profile extends StatelessWidget {
                           ],
                         ),
                         SizedBox(height: _height * 0.02),
-                        profile_box(
+                        Expanded(child:profile_box(
                           "Change Password",
                           Icons.lock,
                           Colors.black.withOpacity(0.9),
                           Colors.white,
-                        ),
+                        ), ),
+
                         SizedBox(height: _height * 0.02),
-                        profile_box(
+                        Expanded(child:profile_box(
                           "Logout",
                           Icons.output_rounded,
                           Colors.white,
                           Colors.redAccent,
-                        ),
+                        ), ),
+
                       ],
                     ),
                   ),
