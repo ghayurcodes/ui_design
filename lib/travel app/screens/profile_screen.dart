@@ -23,7 +23,7 @@ class Profile extends StatelessWidget {
                       Container(
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: NetworkImage('https://img.freepik.com/free-vector/background-abstract-gradient-color-style_483537-3675.jpg'),
+                            image: NetworkImage('https://img.freepik.com/free-vector/abstract-watercolor-pastel-background_87374-139.jpg'),
                             fit: BoxFit.fitWidth,
                           )
                         ),

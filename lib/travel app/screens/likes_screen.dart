@@ -32,7 +32,7 @@ class _likes_screenState extends State<likes_screen> {
                 child: Container(
                     width: double.maxFinite,
                     decoration: BoxDecoration(
-                      color: Color(0xff87CEEB),
+                       color:  Color(0xff012152),
                       borderRadius: BorderRadius.only(bottomRight: Radius.circular(20),bottomLeft:Radius.circular(20) ),
                     ),
                     child: Center(
@@ -68,7 +68,7 @@ class _likes_screenState extends State<likes_screen> {
                     child: Container(
                       width: double.maxFinite,
                        decoration: BoxDecoration(
-                           color: Color(0xff87CEEB),
+                           color: Color(0xff012152),
                           borderRadius: BorderRadius.only(bottomRight: Radius.circular(20),bottomLeft:Radius.circular(20) ),
         ),
                         child: Center(

@@ -21,7 +21,7 @@ class home_provider with ChangeNotifier {
   "https://socialstudieshelp.com/wp-content/uploads/2024/03/The-Great-Wall-of-China-Beyond-the-Bricks.webp"
   ,"https://www.thoughtco.com/thmb/mvzDYqXzP4T_D7JfMTsWm5GgDZA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/sunrise-at-taj-mahal--agra--uttar-pradash--india-583682538-5b91840bc9e77c0050bdc67b.jpg",
   "https://cdn.britannica.com/88/189788-050-9B5DB3A4/Al-Dayr-Petra-Jordan.jpg",
-    "https://www.incatrailmachu.com/img/machu-picchu-02-011.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Machu_Picchu%2C_Peru.jpg/1200px-Machu_Picchu%2C_Peru.jpg",
     "https://www.traveloffpath.com/wp-content/uploads/2021/04/Chichen-Itza.jpg",
     "https://cdn.mos.cms.futurecdn.net/BiNbcY5fXy9Lra47jqHKGK-1200-80.jpg"
 

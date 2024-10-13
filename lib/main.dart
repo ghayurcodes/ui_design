@@ -18,11 +18,12 @@ class MyApp extends StatelessWidget {
       ChangeNotifierProvider(create: (context) => home_provider(),)
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: HomeScreen(),
+        home: SplashScreen(),
       ),
     );
   }
