@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:provider/provider.dart';
 import 'package:ui_design/travel%20app/providers/travel_app_provider.dart';
+import 'package:blurrycontainer/blurrycontainer.dart';
 
 class likes_screen extends StatefulWidget {
   const likes_screen({super.key});
@@ -38,54 +39,26 @@ class _likes_screenState extends State<likes_screen> {
                     )
                   ]
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(value.wondername1.elementAt(index),style: TextStyle(fontWeight: FontWeight.w600,fontSize: 33,color: Colors.white,)),
-                        Row(
-                          children: [
-                            Icon(LineIcons.mapMarker,color: CupertinoColors.inactiveGray,),
-                            Text(value.wondername2.elementAt(index),style: TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color: Colors.white,)),
-                          ],
-                        )
-
-                      ],
-                    )
-                  ],),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 10),
-                    child: GestureDetector(
-                      child: Container(child: Icon(Icons.remove,size: 30,),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.grey.withOpacity(0.5)
-                        ),
-                        margin: EdgeInsets.all(7),
+              child: BlurryContainer(
+                 padding: EdgeInsets.symmetric(vertical: 5,horizontal: 10),
+               blur: 2,
+                
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(child: Text(value.wondername1.elementAt(index),style: TextStyle(fontWeight: FontWeight.w600,fontSize: 33,color: Colors.white,))),
+                    Expanded(
+                      child: Row(
+                        children: [
+                          Icon(LineIcons.mapMarker,color: Colors.white,),
+                          Text(value.wondername2.elementAt(index),style: TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color: Colors.white,)),
+                        ],
                       ),
-                      onTap: (){
-
-                        //
-                        // value.set_visibiility(0.0);
-                        //
-                        // Timer(
-                        //   Duration(milliseconds: 200),
-                        //       () {
-                        //     value.remove_wish(index);
-                        //     value.set_visibiility(1);
-                        //   },
-                        //
-                        // );
-                      },
-                    ),
-                  ),
-
-
-                ],
+                    )
+                
+                  ],
+                ),
               ),
 
             ):Container(
