@@ -29,7 +29,7 @@ class _likes_screenState extends State<likes_screen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Wishlist is Empty!',style: TextStyle(fontWeight: FontWeight.w200,fontSize: 30,color:  Theme.of(context).colorScheme.primary,)),
+                  Text('No Favourites yet!',style: TextStyle(fontWeight: FontWeight.w500,fontSize: 30,color: Colors.brown,)),
                   Text('🙈',style: TextStyle(
                       fontSize: 30
                   ),)
