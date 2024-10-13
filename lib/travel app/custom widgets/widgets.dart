@@ -37,6 +37,7 @@ splash_text(String txt){
   return GestureDetector(
     onTap: ontap,
     child: Container(
+      p
       margin: EdgeInsets.symmetric(vertical: 10,horizontal: 10),
       child: Stack(
         children: [
