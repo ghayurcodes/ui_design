@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:line_icons/line_icons.dart';
 import 'package:provider/provider.dart';
 import 'package:ui_design/travel%20app/providers/travel_app_provider.dart';
 
@@ -24,7 +25,10 @@ class _likes_screenState extends State<likes_screen> {
               height: MediaQuery.of(context).size.height*0.1,
               margin: EdgeInsets.all(10),
               decoration: BoxDecoration(
-                  color: Theme.of(context).colorScheme.secondary,
+                image: DecorationImage(
+                  image: NetworkImage(value.wonder_images.elementAt(index)),
+                  fit: BoxFit.cover
+                ),
                   borderRadius: BorderRadius.circular(20),
                   boxShadow: [
                     BoxShadow(
@@ -38,20 +42,17 @@ class _likes_screenState extends State<likes_screen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(children: [
-                    Container(
-                      // child: Image(image:AssetImage(value.image[index])),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.grey.withOpacity(0.5)
-                      ),
-                      margin: EdgeInsets.all(7),
-                    ),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("lol",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 33,color: Theme.of(context).colorScheme.inversePrimary,)),
-                        Text('\$fgwefw',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color:  Theme.of(context).colorScheme.primary,))
+                        Text(value.wondername1.elementAt(index),style: TextStyle(fontWeight: FontWeight.w600,fontSize: 33,color: Colors.white,)),
+                        Row(
+                          children: [
+                            Icon(LineIcons.mapMarker,color: CupertinoColors.inactiveGray,),
+                            Text(value.wondername2.elementAt(index),style: TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color: Colors.white,)),
+                          ],
+                        )
 
                       ],
                     )
