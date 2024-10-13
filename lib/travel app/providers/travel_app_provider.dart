@@ -1,9 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:http/http.dart';
 import 'package:ui_design/travel%20app/screens/likes_screen.dart';
-
 import '../screens/explore.dart';
 import '../screens/profile_screen.dart';
 
