@@ -15,6 +15,7 @@ class _likes_screenState extends State<likes_screen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
+        padding: EdgeInsets.only(top: 20,right: 30,left: 30),
       color: Colors.white,
         child: Consumer<home_provider>(builder: (context, value, child) {
           return ListView.builder(itemBuilder:  (context, index) {
