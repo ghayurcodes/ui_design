@@ -16,8 +16,28 @@ class likes_screen extends StatefulWidget {
 class _likes_screenState extends State<likes_screen> {
   @override
   Widget build(BuildContext context) {
+
+    var mprov=Provider.of<home_provider>(context,listen: false);
     return SafeArea(
-      child: Container(
+      child: mprov.favs.isEmpty? Center(
+        child: Container(
+          width: MediaQuery.of(context).size.width,
+          height:  MediaQuery.of(context).size.height*0.15,
+          padding: EdgeInsets.all(10),
+          child: FittedBox(
+              fit: BoxFit.contain,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Wishlist is Empty!',style: TextStyle(fontWeight: FontWeight.w200,fontSize: 30,color:  Theme.of(context).colorScheme.primary,)),
+                  Text('🙈',style: TextStyle(
+                      fontSize: 30
+                  ),)
+                ],
+              )
+          ),
+        ),
+      ):Container(
         padding: EdgeInsets.only(top: 20,right: 10,left: 10),
       color: Colors.white,
         child: Consumer<home_provider>(builder: (context, value, child) {
@@ -32,10 +52,10 @@ class _likes_screenState extends State<likes_screen> {
               backgroundBuilder: (context, direction, progress) {
                 if (direction == SwipeDirection.endToStart) {
                  value.favs.remove(index);
-                 print(index);
+
                 } else if (direction == SwipeDirection.startToEnd) {
                   value.favs.remove(index);
-                  print(index);
+
                 }
                 return Container();
               },
