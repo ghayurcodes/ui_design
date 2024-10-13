@@ -15,14 +15,78 @@ class _likes_screenState extends State<likes_screen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
-        padding: EdgeInsets.only(top: 20,right: 30,left: 30),
+        padding: EdgeInsets.only(top: 20,right: 10,left: 10),
       color: Colors.white,
         child: Consumer<home_provider>(builder: (context, value, child) {
           return ListView.builder(itemBuilder:  (context, index) {
             return value.favs.contains(index)?Container(
-              color: Colors.yellowAccent,
-              width: 200,
-              height: 100,
+              width: MediaQuery.of(context).size.width*0.9,
+              height: MediaQuery.of(context).size.height*0.1,
+              margin: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.secondary,
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                        spreadRadius: 1,
+                        blurRadius: 10,
+                        color: Colors.black.withOpacity(0.2)
+                    )
+                  ]
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(children: [
+                    Container(
+                      // child: Image(image:AssetImage(value.image[index])),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.grey.withOpacity(0.5)
+                      ),
+                      margin: EdgeInsets.all(7),
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("lol",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 33,color: Theme.of(context).colorScheme.inversePrimary,)),
+                        Text('\$fgwefw',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color:  Theme.of(context).colorScheme.primary,))
+
+                      ],
+                    )
+                  ],),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 10),
+                    child: GestureDetector(
+                      child: Container(child: Icon(Icons.remove,size: 30,),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.grey.withOpacity(0.5)
+                        ),
+                        margin: EdgeInsets.all(7),
+                      ),
+                      onTap: (){
+
+                        //
+                        // value.set_visibiility(0.0);
+                        //
+                        // Timer(
+                        //   Duration(milliseconds: 200),
+                        //       () {
+                        //     value.remove_wish(index);
+                        //     value.set_visibiility(1);
+                        //   },
+                        //
+                        // );
+                      },
+                    ),
+                  ),
+
+
+                ],
+              ),
+
             ):Container(
               color: Colors.pinkAccent,
               width: 200,
