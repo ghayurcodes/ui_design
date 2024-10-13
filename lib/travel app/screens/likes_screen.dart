@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:ui_design/travel%20app/providers/travel_app_provider.dart';
 import 'package:blurrycontainer/blurrycontainer.dart';
 import 'package:swipeable_tile/swipeable_tile.dart';
+import 'package:lottie/lottie.dart';
 
 class likes_screen extends StatefulWidget {
   const likes_screen({super.key});
@@ -19,23 +20,16 @@ class _likes_screenState extends State<likes_screen> {
 
     var mprov=Provider.of<home_provider>(context,listen: false);
     return SafeArea(
-      child: mprov.favs.isEmpty? Center(
-        child: Container(
-          width: MediaQuery.of(context).size.width,
-          height:  MediaQuery.of(context).size.height*0.15,
-          padding: EdgeInsets.all(10),
-          child: FittedBox(
-              fit: BoxFit.contain,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text('No Favourites yet!',style: TextStyle(fontWeight: FontWeight.w500,fontSize: 30,color: Colors.brown,)),
-                  Text('🙈',style: TextStyle(
-                      fontSize: 30
-                  ),)
-                ],
-              )
-          ),
+      child: mprov.favs.isEmpty? Container(
+        width: MediaQuery.of(context).size.width,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('No Favourites yet!',style: TextStyle(fontWeight: FontWeight.w500,fontSize: 30,color: Colors.black,)),
+            Lottie.network(
+                'https://lottie.host/bb7c7abd-752a-4436-9ff6-808cfb753fbe/rPWKIdo8no.json',
+            fit: BoxFit.contain,height: 100),
+          ],
         ),
       ):Container(
         padding: EdgeInsets.only(top: 20,right: 10,left: 10),
