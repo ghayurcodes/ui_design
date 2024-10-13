@@ -92,7 +92,7 @@ class Profile extends StatelessWidget {
                           ),
                         ),
                         SizedBox(height: _height * 0.01),
-                        textbox("Parker]"),
+                        textbox("Parker"),
                         SizedBox(height: _height * 0.02),
                         Text(
                           "Email",
