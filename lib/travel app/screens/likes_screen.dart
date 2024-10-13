@@ -25,6 +25,7 @@ class _likes_screenState extends State<likes_screen> {
               width: MediaQuery.of(context).size.width*0.9,
               height: MediaQuery.of(context).size.height*0.1,
               margin: EdgeInsets.all(10),
+              padding: EdgeInsets.only(top: 4,bottom: 4,left: 3),
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: NetworkImage(value.wonder_images.elementAt(index)),
@@ -40,21 +41,19 @@ class _likes_screenState extends State<likes_screen> {
                   ]
               ),
               child: BlurryContainer(
-                 padding: EdgeInsets.symmetric(vertical: 5,horizontal: 10),
-               blur: 2,
-                
+                blur: 1,
+                shadowColor: Colors.transparent,
+                color: Colors.black.withOpacity(0.2),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Expanded(child: Text(value.wondername1.elementAt(index),style: TextStyle(fontWeight: FontWeight.w600,fontSize: 33,color: Colors.white,))),
-                    Expanded(
-                      child: Row(
-                        children: [
-                          Icon(LineIcons.mapMarker,color: Colors.white,),
-                          Text(value.wondername2.elementAt(index),style: TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color: Colors.white,)),
-                        ],
-                      ),
+                    Expanded(child: FittedBox(child: Text(value.wondername1.elementAt(index),style: TextStyle(fontWeight: FontWeight.w600,fontSize: 33,color: Colors.white,)))),
+                    Row(
+                      children: [
+                        Icon(LineIcons.mapMarker,color: Colors.white,),
+                        Text(value.wondername2.elementAt(index),style: TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color: Colors.white,)),
+                      ],
                     )
                 
                   ],
@@ -62,9 +61,6 @@ class _likes_screenState extends State<likes_screen> {
               ),
 
             ):Container(
-              color: Colors.pinkAccent,
-              width: 200,
-              height: 40,
             );
           },itemCount: value.wondername1.length,);
         },),
