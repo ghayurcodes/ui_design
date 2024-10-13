@@ -28,10 +28,35 @@ class _likes_screenState extends State<likes_screen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('No Favourites yet!',style: TextStyle(fontWeight: FontWeight.w500,fontSize: 30,color: Colors.black,)),
-                Lottie.network(
-                    'https://lottie.host/bb7c7abd-752a-4436-9ff6-808cfb753fbe/rPWKIdo8no.json',
-                    fit: BoxFit.contain,height: 100),
+                Expanded(flex: 1,
+                child: Container(
+                    width: double.maxFinite,
+                    decoration: BoxDecoration(
+                      color: Color(0xff87CEEB),
+                      borderRadius: BorderRadius.only(bottomRight: Radius.circular(20),bottomLeft:Radius.circular(20) ),
+                    ),
+                    child: Center(
+                      child: FittedBox(
+                        child: Text('Favourites',style:  GoogleFonts.londrinaSketch(
+                            fontSize: 55,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold
+
+                        ),),
+                      ),
+                    ))),
+                Expanded(
+                  flex: 9,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('No Favourites yet!',style: TextStyle(fontWeight: FontWeight.w500,fontSize: 30,color: Colors.black,)),
+                    Lottie.network(
+                        'https://lottie.host/bb7c7abd-752a-4436-9ff6-808cfb753fbe/rPWKIdo8no.json',
+                        fit: BoxFit.contain,height: 100),
+                  ],
+                ))
+
               ],
             ),
           ):Container(
@@ -43,14 +68,18 @@ class _likes_screenState extends State<likes_screen> {
                     child: Container(
                       width: double.maxFinite,
                        decoration: BoxDecoration(
-                           color: Colors.grey,
+                           color: Color(0xff87CEEB),
                           borderRadius: BorderRadius.only(bottomRight: Radius.circular(20),bottomLeft:Radius.circular(20) ),
         ),
                         child: Center(
-                          child: Text('wfef',style:  GoogleFonts.londrinaSketch(
-                            fontSize: 50,
-
-                          ),),
+                          child: FittedBox(
+                            child: Text('Favourites',style:  GoogleFonts.londrinaSketch(
+                              fontSize: 55,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold
+                            
+                            ),),
+                          ),
                         ))),
                 Expanded(
                   flex: 9,
