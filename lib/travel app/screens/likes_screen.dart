@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:provider/provider.dart';
 import 'package:ui_design/travel%20app/providers/travel_app_provider.dart';
@@ -34,71 +35,95 @@ class _likes_screenState extends State<likes_screen> {
               ],
             ),
           ):Container(
-            padding: EdgeInsets.only(top: 20,right: 10,left: 10),
             color: Colors.white,
-            child: ListView.builder(itemBuilder:  (context, index) {
-              return value.favs.contains(index)?SwipeableTile(
-                color: Colors.white,
-                swipeThreshold: 0.3,
-                isElevated: false,
-                direction: SwipeDirection.horizontal,
-                onSwiped: (direction) {
-                  if (direction == SwipeDirection.endToStart) {
-                    value.add_fav(index);
+            child: Column(
+              children: [
+                Expanded(
+                    flex: 1,
+                    child: Container(
+                      width: double.maxFinite,
+                       decoration: BoxDecoration(
+                           color: Colors.grey,
+                          borderRadius: BorderRadius.only(bottomRight: Radius.circular(20),bottomLeft:Radius.circular(20) ),
+        ),
+                        child: Center(
+                          child: Text('wfef',style:  GoogleFonts.londrinaSketch(
+                            fontSize: 50,
 
-                  } else if (direction == SwipeDirection.startToEnd) {
-                    value.add_fav(index);
+                          ),),
+                        ))),
+                Expanded(
+                  flex: 9,
+                  child: Padding(
+                    padding: EdgeInsets.only(right: 10,left: 10),
+                    child: ListView.builder(itemBuilder:  (context, index) {
+                      return value.favs.contains(index)?SwipeableTile(
+                        color: Colors.white,
+                        swipeThreshold: 0.3,
+                        isElevated: false,
+                        direction: SwipeDirection.horizontal,
+                        onSwiped: (direction) {
+                          if (direction == SwipeDirection.endToStart) {
+                            value.add_fav(index);
 
-                  }
+                          } else if (direction == SwipeDirection.startToEnd) {
+                            value.add_fav(index);
 
-                },
-                backgroundBuilder: (context, direction, progress) {
-                  return Container();
-                },
-                key: UniqueKey(),
-                child: Container(
-                  width: MediaQuery.of(context).size.width*0.9,
-                  height: MediaQuery.of(context).size.height*0.1,
-                  margin: EdgeInsets.all(10),
-                  padding: EdgeInsets.only(top: 4,bottom: 4,left: 3),
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: NetworkImage(value.wonder_images.elementAt(index)),
-                          fit: BoxFit.cover
-                      ),
-                      borderRadius: BorderRadius.circular(20),
-                      boxShadow: [
-                        BoxShadow(
-                            spreadRadius: 1,
-                            blurRadius: 10,
-                            color: Colors.black.withOpacity(0.2)
-                        )
-                      ]
+                          }
+
+                        },
+                        backgroundBuilder: (context, direction, progress) {
+                          return Container();
+                        },
+                        key: UniqueKey(),
+                        child: Container(
+                          width: MediaQuery.of(context).size.width*0.9,
+                          height: MediaQuery.of(context).size.height*0.1,
+                          margin: EdgeInsets.all(10),
+                          padding: EdgeInsets.only(top: 4,bottom: 4,left: 3),
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: NetworkImage(value.wonder_images.elementAt(index)),
+                                  fit: BoxFit.cover
+                              ),
+                              borderRadius: BorderRadius.circular(20),
+                              boxShadow: [
+                                BoxShadow(
+                                    spreadRadius: 1,
+                                    blurRadius: 10,
+                                    color: Colors.black.withOpacity(0.2)
+                                )
+                              ]
+                          ),
+                          child: BlurryContainer(
+                            blur: 1,
+                            shadowColor: Colors.transparent,
+                            color: Colors.black.withOpacity(0.2),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Expanded(child: FittedBox(child: Text(value.wondername1.elementAt(index),style: TextStyle(fontWeight: FontWeight.w600,fontSize: 33,color: Colors.white,)))),
+                                Row(
+                                  children: [
+                                    Icon(LineIcons.mapMarker,color: Colors.white,),
+                                    Text(value.wondername2.elementAt(index),style: TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color: Colors.white,)),
+                                  ],
+                                )
+
+                              ],
+                            ),
+                          ),
+
+                        ),
+                      ):Container(
+                      );
+                    },itemCount: value.wondername1.length,),
                   ),
-                  child: BlurryContainer(
-                    blur: 1,
-                    shadowColor: Colors.transparent,
-                    color: Colors.black.withOpacity(0.2),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Expanded(child: FittedBox(child: Text(value.wondername1.elementAt(index),style: TextStyle(fontWeight: FontWeight.w600,fontSize: 33,color: Colors.white,)))),
-                        Row(
-                          children: [
-                            Icon(LineIcons.mapMarker,color: Colors.white,),
-                            Text(value.wondername2.elementAt(index),style: TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color: Colors.white,)),
-                          ],
-                        )
-
-                      ],
-                    ),
-                  ),
-
                 ),
-              ):Container(
-              );
-            },itemCount: value.wondername1.length,),
+
+              ],
+            ),
           ),
         );
       },
