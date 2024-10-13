@@ -24,15 +24,18 @@ class _likes_screenState extends State<likes_screen> {
           return ListView.builder(itemBuilder:  (context, index) {
             return value.favs.contains(index)?SwipeableTile(
               color: Colors.white,
-              swipeThreshold: 0.2,
+              swipeThreshold: 0.3,
+              isElevated: false,
               direction: SwipeDirection.horizontal,
               onSwiped: (direction) {// Here call setState to update state
               },
               backgroundBuilder: (context, direction, progress) {
                 if (direction == SwipeDirection.endToStart) {
-                  // return your widget
+                 value.favs.remove(index);
+                 print(index);
                 } else if (direction == SwipeDirection.startToEnd) {
-                  // return your widget
+                  value.favs.remove(index);
+                  print(index);
                 }
                 return Container();
               },
