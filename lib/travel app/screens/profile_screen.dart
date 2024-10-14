@@ -50,9 +50,8 @@ class Profile extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Positioned(
-                        bottom: _height * 0.04,
-                        right: 140,
+                      Align(
+                        alignment: Alignment.center,
                         child: CircleAvatar(
                           radius: 60,
                           backgroundImage: NetworkImage(
