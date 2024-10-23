@@ -16,6 +16,16 @@ class login extends StatelessWidget {
         height: _height,
         child: Column(
           children: [
+            Expanded(
+              flex: 3,
+                child: Container(
+                  color: Colors.red,
+            )),
+            Expanded(
+              flex: 7,
+                child: Column(
+
+            ))
 
           ],
         )
