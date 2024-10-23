@@ -17,7 +17,7 @@ class login extends StatelessWidget {
         child: Column(
           children: [
             Expanded(
-              flex: 3,
+              flex: 4,
                 child: Container(
                   color: Colors.red,
             )),
