@@ -68,7 +68,20 @@ class login extends StatelessWidget {
                               ),
                             ),
                           ),
-                          
+                          custom_button("Sign in",Colors.orange),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Align(
+                              alignment: Alignment.center,
+                              child: Text(
+                                'or',
+                                style: TextStyle(color: Colors.white,fontSize: _width*0.06),
+
+                              ),
+                            ),
+                          ),
+                          custom_button("Sign in",Colors.orange),
+
 
                         ],
                       ),
@@ -112,3 +125,21 @@ custom_feild() {
     maxLines: 1,
   );
 }
+
+
+custom_button(String txt,var color){
+  return Container(
+    padding: EdgeInsets.symmetric(vertical: 5),
+    width: double.maxFinite,
+    
+    child: Center(child: Text(txt,style: TextStyle(
+      color: Colors.black,
+      fontSize: 25
+    ),)),
+    decoration: BoxDecoration(
+      color: color,
+      borderRadius: BorderRadius.circular(25)
+    ),
+  );
+}
+
