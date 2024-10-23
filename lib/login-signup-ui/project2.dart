@@ -23,8 +23,20 @@ class login extends StatelessWidget {
             )),
             Expanded(
               flex: 7,
-                child: Column(
+                child: Column(mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("Login",style: TextStyle(
+                  fontSize: _width*0.1,
+                  color: Colors.white
+                ),),
+                Text('Email',style: TextStyle(
+                  color: Colors.white
+                ),),
+                custom_feild(),
 
+                
+              ],
             ))
 
           ],
@@ -33,4 +45,22 @@ class login extends StatelessWidget {
     ),
     );
   }
+}
+
+
+
+
+custom_feild(){
+  return TextField(
+    decoration: InputDecoration(
+      border: InputBorder.none,
+      contentPadding: EdgeInsets.all(5),
+      filled: true,
+      fillColor: Colors.white
+
+    ),
+    maxLines: 1,
+    expands: false,
+
+  );
 }
