@@ -21,7 +21,15 @@ class login extends StatelessWidget {
                 Expanded(
                     flex: 4,
                     child: Container(
-                      color: Colors.red,
+
+                      decoration: BoxDecoration(
+                          color: Colors.red,
+                        image: DecorationImage(
+                           image: AssetImage("assets/images/woman_image.png"),
+                          fit: BoxFit.cover,
+                        ),
+                        borderRadius: BorderRadius.only(bottomRight: Radius.circular(200))
+                      ),
                     )),
                 Expanded(
                     flex: 7,
@@ -81,10 +89,7 @@ class login extends StatelessWidget {
                               ),
                             ),
                           ),
-                          custom_button("Sign in",Color(0xff0f1012),Colors.white,LineIcon.googleDrive(
-                            color: Colors.red,
-                            size: 30,
-                          )),
+                          custom_button("Sign in",Color(0xff0f1012),Colors.white,"assets/images/google logo.png"),
                           Expanded(child: SizedBox()),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -132,6 +137,9 @@ class login extends StatelessWidget {
 
 custom_feild() {
   return TextField(
+    style: TextStyle(
+      color: Colors.white
+    ),
     cursorColor: Colors.white,
     decoration: InputDecoration(
       border: InputBorder.none,
@@ -162,7 +170,9 @@ custom_button(String txt,var bgcolor,var txtcolor,var iconn){
     ),):Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        iconn,
+        Container(child: Image.asset(iconn),
+        width: 30,
+            height: 40,),
         SizedBox(
           width: 5,
         ),
@@ -175,6 +185,13 @@ custom_button(String txt,var bgcolor,var txtcolor,var iconn){
     decoration: BoxDecoration(
       color: bgcolor,
       borderRadius: BorderRadius.circular(25),
+      boxShadow: [
+        BoxShadow(
+          color: txtcolor.withOpacity(0.3),
+          spreadRadius: 1,
+          blurRadius: 5
+        )
+      ]
 
     ),
   );
