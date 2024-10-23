@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:line_icons/line_icon.dart';
 
 class login extends StatelessWidget {
   const login({super.key});
@@ -68,7 +69,7 @@ class login extends StatelessWidget {
                               ),
                             ),
                           ),
-                          custom_button("Sign in",Colors.orange),
+                          custom_button("Sign in",Colors.orange,Colors.black,null),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Align(
@@ -80,7 +81,10 @@ class login extends StatelessWidget {
                               ),
                             ),
                           ),
-                          custom_button("Sign in",Colors.orange),
+                          custom_button("Sign in",Color(0xff0f1012),Colors.white,LineIcon.googleDrive(
+                            color: Colors.red,
+                            size: 30,
+                          )),
                           Expanded(child: SizedBox()),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -91,7 +95,17 @@ class login extends StatelessWidget {
                                 style: TextStyle(color: Colors.grey),
                               ),
                             ),
+                          ),Padding(
+                            padding: const EdgeInsets.all(1),
+                            child: Align(
+                              alignment: Alignment.bottomCenter,
+                              child: Text(
+                                'Signup',
+                                style: TextStyle(color: Colors.orange),
+                              ),
+                            ),
                           ),
+
 
 
                         ],
@@ -138,18 +152,30 @@ custom_feild() {
 }
 
 
-custom_button(String txt,var color){
+custom_button(String txt,var bgcolor,var txtcolor,var iconn){
   return Container(
     padding: EdgeInsets.symmetric(vertical: 5),
     width: double.maxFinite,
-    
-    child: Center(child: Text(txt,style: TextStyle(
-      color: Colors.black,
+    child: Center(child: iconn==null?Text(txt,style: TextStyle(
+      color: txtcolor,
       fontSize: 25
-    ),)),
+    ),):Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        iconn,
+        SizedBox(
+          width: 5,
+        ),
+        Text(txt,style: TextStyle(
+            color: txtcolor,
+            fontSize: 25
+        ),)
+      ],
+    )),
     decoration: BoxDecoration(
-      color: color,
-      borderRadius: BorderRadius.circular(25)
+      color: bgcolor,
+      borderRadius: BorderRadius.circular(25),
+
     ),
   );
 }
