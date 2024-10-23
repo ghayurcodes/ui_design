@@ -10,6 +10,7 @@ class login extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.black,
+      resizeToAvoidBottomInset: false ,
     body: Center(
     child: Container(
         width:_width,
@@ -52,15 +53,21 @@ class login extends StatelessWidget {
 
 custom_feild(){
   return TextField(
+    cursorColor: Colors.white,
     decoration: InputDecoration(
       border: InputBorder.none,
       contentPadding: EdgeInsets.all(5),
-      filled: true,
-      fillColor: Colors.white
-
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(25),
+        borderSide: BorderSide(
+            color: Colors.white),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(25),
+        borderSide: BorderSide(
+            color: Colors.white,),
+      ),
     ),
     maxLines: 1,
-    expands: false,
-
   );
 }
