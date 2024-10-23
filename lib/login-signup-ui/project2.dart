@@ -21,14 +21,20 @@ class login extends StatelessWidget {
                 Expanded(
                     flex: 4,
                     child: Container(
-
                       decoration: BoxDecoration(
                           color: Colors.red,
                         image: DecorationImage(
                            image: AssetImage("assets/images/woman_image.png"),
                           fit: BoxFit.cover,
                         ),
-                        borderRadius: BorderRadius.only(bottomRight: Radius.circular(200))
+                        borderRadius: BorderRadius.only(bottomRight: Radius.circular(200)),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.white.withOpacity(0.5),
+                                spreadRadius: 2,
+                                blurRadius: 10
+                            )
+                          ]
                       ),
                     )),
                 Expanded(
