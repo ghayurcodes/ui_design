@@ -81,6 +81,17 @@ class login extends StatelessWidget {
                             ),
                           ),
                           custom_button("Sign in",Colors.orange),
+                          Expanded(child: SizedBox()),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Align(
+                              alignment: Alignment.bottomCenter,
+                              child: Text(
+                                'Don\' Have an Account?',
+                                style: TextStyle(color: Colors.grey),
+                              ),
+                            ),
+                          ),
 
 
                         ],
