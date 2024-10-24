@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icon.dart';
+import 'package:ui_design/login-signup-ui/login_screen.dart';
 
 class sign_up extends StatelessWidget {
   const sign_up({super.key});
@@ -24,10 +25,10 @@ class sign_up extends StatelessWidget {
                       decoration: BoxDecoration(
                           color: Colors.red,
                           image: DecorationImage(
-                            image: AssetImage("assets/images/woman2.webp"),
+                            image: AssetImage("assets/images/cowboy_image.png"),
                             fit: BoxFit.cover,
                           ),
-                          borderRadius: BorderRadius.only(bottomRight: Radius.circular(200)),
+                          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(200)),
                           boxShadow: [
                             BoxShadow(
                                 color: Colors.white.withOpacity(0.5),
@@ -47,7 +48,7 @@ class sign_up extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Login",
+                            "Signup",
                             style: TextStyle(
                                 fontSize: _width * 0.1, color: Colors.white),
                           ),
@@ -63,7 +64,7 @@ class sign_up extends StatelessWidget {
                           ),
                           custom_feild(),
                           SizedBox(
-                            height: _width * 0.04,
+                            height: _width * 0.02,
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -73,46 +74,44 @@ class sign_up extends StatelessWidget {
                             ),
                           ),
                           custom_feild(),
+                          SizedBox(
+                            height: _width * 0.02,
+                          ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Align(
-                              alignment: Alignment.centerRight,
-                              child: Text(
-                                'Forgot Password',
-                                style: TextStyle(color: Colors.grey),
-                              ),
+                            child: Text(
+                              'Confirm Password',
+                              style: TextStyle(color: Colors.white),
                             ),
                           ),
-                          custom_button("Sign in",Colors.orange,Colors.black,null),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Align(
-                              alignment: Alignment.center,
-                              child: Text(
-                                'or',
-                                style: TextStyle(color: Colors.white,fontSize: _width*0.06),
+                          custom_feild(),
+                          SizedBox(
+                            height: _width * 0.06,
+                          ),
+                          custom_button("Signup",Colors.orange,Colors.black,null),
 
-                              ),
-                            ),
-                          ),
-                          custom_button("Sign in",Color(0xff0f1012),Colors.white,"assets/images/google logo.png"),
                           Expanded(child: SizedBox()),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Align(
                               alignment: Alignment.bottomCenter,
                               child: Text(
-                                'Don\' Have an Account?',
+                                'Already Have an Account?',
                                 style: TextStyle(color: Colors.grey),
                               ),
                             ),
-                          ),Padding(
-                            padding: const EdgeInsets.all(1),
-                            child: Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Signup',
-                                style: TextStyle(color: Colors.orange),
+                          ),GestureDetector(
+                            onTap: (){
+                              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => login(),));
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.all(1),
+                              child: Align(
+                                alignment: Alignment.bottomCenter,
+                                child: Text(
+                                  'Signin',
+                                  style: TextStyle(color: Colors.orange),
+                                ),
                               ),
                             ),
                           ),

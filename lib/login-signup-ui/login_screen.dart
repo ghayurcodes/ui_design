@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icon.dart';
+import 'package:ui_design/login-signup-ui/sugnup_screen.dart';
 
 class login extends StatelessWidget {
   const login({super.key});
@@ -106,13 +107,18 @@ class login extends StatelessWidget {
                                 style: TextStyle(color: Colors.grey),
                               ),
                             ),
-                          ),Padding(
-                            padding: const EdgeInsets.all(1),
-                            child: Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Signup',
-                                style: TextStyle(color: Colors.orange),
+                          ),GestureDetector(
+                            onTap: (){
+                              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => sign_up(),));
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.all(1),
+                              child: Align(
+                                alignment: Alignment.bottomCenter,
+                                child: Text(
+                                  'Signup',
+                                  style: TextStyle(color: Colors.orange),
+                                ),
                               ),
                             ),
                           ),
