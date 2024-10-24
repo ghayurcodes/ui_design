@@ -95,7 +95,7 @@ class login extends StatelessWidget {
                               ),
                             ),
                           ),
-                          custom_button("Sign in",Color(0xff0f1012),Colors.white,"assets/images/google logo.png"),
+                          custom_button("Login with Google",Color(0xff0f1012),Colors.white,"assets/images/google logo.png"),
                           Expanded(child: SizedBox()),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
