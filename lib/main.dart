@@ -6,7 +6,7 @@ import 'package:ui_design/travel%20app/screens/home.dart';
 import 'package:ui_design/travel%20app/screens/spalsh_screen.dart';
 import 'package:provider/provider.dart';
 
-import 'login-signup-ui/project2.dart';
+import 'login-signup-ui/login_screen.dart';
 void main() {
   runApp(const MyApp());
 }
