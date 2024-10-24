@@ -62,7 +62,7 @@ class login extends StatelessWidget {
                               style: TextStyle(color: Colors.white),
                             ),
                           ),
-                          custom_feild(),
+                          custom_feild(LineIcon.user()),
                           SizedBox(
                             height: _width * 0.04,
                           ),
@@ -73,7 +73,7 @@ class login extends StatelessWidget {
                               style: TextStyle(color: Colors.white),
                             ),
                           ),
-                          custom_feild(),
+                          custom_feild(LineIcon.lock()),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Align(
@@ -84,7 +84,19 @@ class login extends StatelessWidget {
                               ),
                             ),
                           ),
-                          custom_button("Sign in",Colors.orange,Colors.black,null),
+                          GestureDetector(
+                            child:custom_button("Sign in",Colors.orange,Colors.black,null),
+                            onTap: (){
+                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Center(
+                                child: Text('Just Demo!!',style: TextStyle(
+                                    color: Colors.white
+                                ),),
+                              ),
+                                backgroundColor: Colors.black,
+                                duration: Duration(seconds: 1),));
+                            },
+                          ),
+
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Align(
@@ -96,7 +108,18 @@ class login extends StatelessWidget {
                               ),
                             ),
                           ),
-                          custom_button("Login with Google",Color(0xff0f1012),Colors.white,"assets/images/google logo.png"),
+                          GestureDetector(
+                            child:custom_button("Login with Google",Color(0xff0f1012),Colors.white,"assets/images/google logo.png"),
+                            onTap: (){
+                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Center(
+                                child: Text('Just Demo!!',style: TextStyle(
+                                    color: Colors.white
+                                ),),
+                              ),
+                                backgroundColor: Colors.black,
+                                duration: Duration(seconds: 1),));
+                            },
+                          ),
                           Expanded(child: SizedBox()),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -147,13 +170,14 @@ class login extends StatelessWidget {
 
 
 
-custom_feild() {
+custom_feild(var iconn) {
   return TextField(
     style: TextStyle(
       color: Colors.white
     ),
     cursorColor: Colors.white,
     decoration: InputDecoration(
+      suffixIcon:iconn,
       border: InputBorder.none,
       contentPadding: EdgeInsets.all(5),
       enabledBorder: OutlineInputBorder(

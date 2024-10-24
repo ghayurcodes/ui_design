@@ -62,7 +62,7 @@ class sign_up extends StatelessWidget {
                               style: TextStyle(color: Colors.white),
                             ),
                           ),
-                          custom_feild(),
+                          custom_feild(LineIcon.user()),
                           SizedBox(
                             height: _width * 0.02,
                           ),
@@ -73,7 +73,7 @@ class sign_up extends StatelessWidget {
                               style: TextStyle(color: Colors.white),
                             ),
                           ),
-                          custom_feild(),
+                          custom_feild(LineIcon.lock()),
                           SizedBox(
                             height: _width * 0.02,
                           ),
@@ -84,11 +84,14 @@ class sign_up extends StatelessWidget {
                               style: TextStyle(color: Colors.white),
                             ),
                           ),
-                          custom_feild(),
+                          custom_feild(null),
                           SizedBox(
                             height: _width * 0.06,
                           ),
-                          custom_button("Signup",Colors.orange,Colors.black,null),
+                          GestureDetector(
+                            child: custom_button("Signup",Colors.orange,Colors.black,null),
+                          ),
+
 
                           Expanded(child: SizedBox()),
                           Padding(
@@ -137,68 +140,4 @@ class sign_up extends StatelessWidget {
 
 
 
-
-
-
-custom_feild() {
-  return TextField(
-    style: TextStyle(
-        color: Colors.white
-    ),
-    cursorColor: Colors.white,
-    decoration: InputDecoration(
-      border: InputBorder.none,
-      contentPadding: EdgeInsets.all(5),
-      enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(25),
-        borderSide: BorderSide(color: Colors.grey),
-      ),
-      focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(25),
-        borderSide: BorderSide(
-          color: Colors.grey,
-        ),
-      ),
-    ),
-    maxLines: 1,
-  );
-}
-
-
-custom_button(String txt,var bgcolor,var txtcolor,var iconn){
-  return Container(
-    padding: EdgeInsets.symmetric(vertical: 5),
-    width: double.maxFinite,
-    child: Center(child: iconn==null?Text(txt,style: TextStyle(
-        color: txtcolor,
-        fontSize: 25
-    ),):Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Container(child: Image.asset(iconn),
-          width: 30,
-          height: 40,),
-        SizedBox(
-          width: 5,
-        ),
-        Text(txt,style: TextStyle(
-            color: txtcolor,
-            fontSize: 25
-        ),)
-      ],
-    )),
-    decoration: BoxDecoration(
-        color: bgcolor,
-        borderRadius: BorderRadius.circular(25),
-        boxShadow: [
-          BoxShadow(
-              color: txtcolor.withOpacity(0.3),
-              spreadRadius: 1,
-              blurRadius: 5
-          )
-        ]
-
-    ),
-  );
-}
 
