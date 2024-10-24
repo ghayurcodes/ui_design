@@ -24,7 +24,7 @@ class login extends StatelessWidget {
                       decoration: BoxDecoration(
                           color: Colors.red,
                         image: DecorationImage(
-                           image: AssetImage("assets/images/woman_image.png"),
+                           image: AssetImage("assets/images/woman2.webp"),
                           fit: BoxFit.cover,
                         ),
                         borderRadius: BorderRadius.only(bottomRight: Radius.circular(200)),
