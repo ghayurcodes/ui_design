@@ -14,7 +14,8 @@ class temo extends StatelessWidget {
         child: Center(
           child: Text("helo man",style: TextStyle(
             fontSize: 40,
-            fontStyle: FontStyle.italic
+            fontStyle: FontStyle.italic,
+            color: Colors.green
           ),),
         ),
       ),
