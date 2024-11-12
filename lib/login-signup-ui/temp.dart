@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class temo extends StatelessWidget {
   const temo({super.key});
@@ -12,10 +13,8 @@ class temo extends StatelessWidget {
         height: double.maxFinite,
         color: Colors.blue,
         child: Center(
-          child: Text("helo man",style: TextStyle(
+          child: Text("helo man",style: GoogleFonts.acme(
             fontSize: 40,
-            fontStyle: FontStyle.italic,
-            color: Colors.green
           ),),
         ),
       ),
