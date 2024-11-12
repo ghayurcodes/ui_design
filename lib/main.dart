@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:ui_design/login-signup-ui/sugnup_screen.dart';
+import 'package:ui_design/login-signup-ui/temp.dart';
 import 'package:ui_design/travel%20app/providers/travel_app_provider.dart';
 import 'package:ui_design/travel%20app/screens/home.dart';
 import 'package:ui_design/travel%20app/screens/spalsh_screen.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: sign_up(),
+        home: temo(),
       ),
     );
   }
