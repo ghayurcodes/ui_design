@@ -36,8 +36,13 @@ class temo extends StatelessWidget {
                   borderRadius: BorderRadius.circular(25)
                 ),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    
+                    Icon(Icons.receipt_rounded,size: _width*0.09,),
+                    Icon(Icons.receipt_rounded,size: _width*0.09,),
+                    Icon(Icons.receipt_rounded,size: _width*0.09,),
+
+
                   ],
                 ),
               )
