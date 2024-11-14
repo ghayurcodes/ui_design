@@ -12,9 +12,10 @@ class temo extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
             backgroundColor: Colors.transparent,
-          title: Text("Money Split",style: TextStyle(
+          title: FittedBox(child: Text("Money Split",style: TextStyle(
             fontSize: 100
-          ),),
+          ),),),
+        centerTitle: true,
       ),
       body: Container(
         width: double.maxFinite,
