@@ -13,7 +13,9 @@ class temo extends StatelessWidget {
       appBar: AppBar(
             backgroundColor: Colors.transparent,
           title: FittedBox(child: Text("Money Split",style: TextStyle(
-            fontSize: 100
+            fontSize: _width*0.09,
+            fontFamily: "Meme",
+            fontWeight: FontWeight.w600
           ),),),
         centerTitle: true,
       ),
