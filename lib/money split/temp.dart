@@ -8,10 +8,12 @@ class temo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+
       body: Container(
-        width: double.maxFinite,
+        width: 
         height: double.maxFinite,
-        color: Colors.blue,
+        color: Colors.grey,
         child: Center(
           child: Text("helo man",style: GoogleFonts.acme(
             fontSize: 40,
