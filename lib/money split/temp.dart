@@ -11,7 +11,10 @@ class temo extends StatelessWidget {
     var _width=MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        
+            backgroundColor: Colors.transparent,
+          title: Text("Money Split",style: TextStyle(
+            fontSize: 100
+          ),),
       ),
       body: Container(
         width: double.maxFinite,
