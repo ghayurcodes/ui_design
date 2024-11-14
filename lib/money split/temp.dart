@@ -7,17 +7,29 @@ class temo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var _height=MediaQuery.of(context).size.height;
+    var _width=MediaQuery.of(context).size.width;
     return Scaffold(
-
-
+      appBar: A,
       body: Container(
-        width: 
+        width: double.maxFinite,
         height: double.maxFinite,
         color: Colors.grey,
         child: Center(
-          child: Text("helo man",style: GoogleFonts.acme(
-            fontSize: 40,
-          ),),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Container(
+                margin: EdgeInsets.only(bottom: 10,right: 10,left: 10),
+                width: _width,
+                height: _height*0.1,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(25)
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
