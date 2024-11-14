@@ -10,7 +10,9 @@ class temo extends StatelessWidget {
     var _height=MediaQuery.of(context).size.height;
     var _width=MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: A,
+      appBar: AppBar(
+        
+      ),
       body: Container(
         width: double.maxFinite,
         height: double.maxFinite,
