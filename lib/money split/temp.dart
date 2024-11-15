@@ -28,6 +28,7 @@ class temo extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Expanded(child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(10),
@@ -53,18 +54,31 @@ class temo extends StatelessWidget {
                        ],
                     ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text('People you owe',style: TextStyle(
+                      fontSize: _width*0.06,
+                      fontWeight: FontWeight.w500
+
+                    ),),
+                  ),
+                   
                   Expanded(child:ListView.builder(itemBuilder:  (context, index) {
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ListTile(
                         leading: CircleAvatar(
-                          radius: 30,
+                          radius: 25,
                         ),
-                        title: Text("Alex"),
+                        title: Text("Alex Trump",style: TextStyle(
+                          fontSize: _width*0.05,
+
+                        ),),
                         trailing: FittedBox(
                           child: Text("\$30",style: TextStyle(
-                            fontSize: _width*0.1,
+                            fontSize: _width*0.09,
                             fontFamily: "splash",
+
                           ),),
                         ),
                       ),
