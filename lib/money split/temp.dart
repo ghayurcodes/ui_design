@@ -54,10 +54,18 @@ class temo extends StatelessWidget {
                     ),
                   ),
                   Expanded(child:ListView.builder(itemBuilder:  (context, index) {
-                    return ListTile(
-                      
+                    return Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ListTile(
+                        leading: CircleAvatar(
+                          radius: 30,
+                        ),
+                        title: Text("Alex"),
+                        trailing: Text("\$30",style:  ,),
+                      ),
+
                     );
-                  },) ),
+                  },itemCount: 2,) ),
                   // Expanded(child: ),
                 ],
               )),
