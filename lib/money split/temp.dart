@@ -114,6 +114,7 @@ class temo extends StatelessWidget {
                       child: ListTile(
                         leading: CircleAvatar(
                           radius: 25,
+                          backgroundColor: Colors.redAccent,
                         ),
                         title: Text("Alex Trump",style: TextStyle(
                           fontSize: _width*0.05,
