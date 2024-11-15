@@ -23,7 +23,7 @@ class temo extends StatelessWidget {
       body: Container(
         width: double.maxFinite,
         height: double.maxFinite,
-
+        color: Colors.black.withOpacity(0.1),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
