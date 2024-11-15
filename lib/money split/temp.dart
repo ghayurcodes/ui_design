@@ -43,13 +43,49 @@ class temo extends StatelessWidget {
                              color: Colors.redAccent,
                               shape: BoxShape.circle
                            ),
+                           child: Center(
+                             child: Padding(
+                               padding: const EdgeInsets.all(8.0),
+                               child: Column(
+                                 mainAxisAlignment: MainAxisAlignment.center,
+                                 children: [
+                                   Text("YOU OWE",style: TextStyle(
+                                     color: Colors.white,fontSize: _width*0.05
+                                   ),),
+                                   FittedBox(
+                                     child: Text('\$80',style: TextStyle(
+                                         color: Colors.white,fontSize: _width*0.1
+                                     ),),
+                                   ),
+                                 ],
+                               ),
+                             ),
+                           ),
                          ),
                          Container(
                            width: _width*0.4,
                            height: _width*0.4,
                            decoration: BoxDecoration(
-                               color: Colors.greenAccent,
+                               color: Colors.green,
                                shape: BoxShape.circle
+                           ),
+                           child: Center(
+                             child: Padding(
+                               padding: const EdgeInsets.all(8.0),
+                               child: Column(
+                                 mainAxisAlignment: MainAxisAlignment.center,
+                                 children: [
+                                   Text("OWE YOU",style: TextStyle(
+                                       color: Colors.white,fontSize: _width*0.05
+                                   ),),
+                                   FittedBox(
+                                     child: Text('\$240',style: TextStyle(
+                                         color: Colors.white,fontSize: _width*0.1
+                                     ),),
+                                   ),
+                                 ],
+                               ),
+                             ),
                            ),
                          ),
                        ],
@@ -86,7 +122,8 @@ class temo extends StatelessWidget {
                         trailing: FittedBox(
                           child: Text("\$30",style: TextStyle(
                             fontSize: _width*0.09,
-                            fontFamily: "splash",
+                              fontFamily: "splash",
+                            color: Colors.redAccent
 
                           ),),
                         ),
@@ -127,6 +164,7 @@ class temo extends StatelessWidget {
                           child: Text("\$30",style: TextStyle(
                             fontSize: _width*0.09,
                             fontFamily: "splash",
+                            color: Colors.green
 
                           ),),
                         ),
@@ -147,9 +185,9 @@ class temo extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Icon(Icons.receipt_rounded,size: _width*0.09,),
-                    Icon(Icons.receipt_rounded,size: _width*0.09,),
-                    Icon(Icons.receipt_rounded,size: _width*0.09,),
+                    Icon(Icons.history,size: _width*0.1,),
+                    Icon(Icons.add_circle_rounded,size: _width*0.2,color: Colors.green,),
+                    Icon(Icons.person,size: _width*0.1,),
 
 
                   ],
