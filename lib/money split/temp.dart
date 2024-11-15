@@ -61,7 +61,10 @@ class temo extends StatelessWidget {
                           radius: 30,
                         ),
                         title: Text("Alex"),
-                        trailing: Text("\$30",style:  ,),
+                        trailing: Text("\$30",style: TextStyle(
+                          fontSize: _width*0.09,
+                          fontFamily: "splash",
+                        ),),
                       ),
 
                     );
