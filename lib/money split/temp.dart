@@ -11,7 +11,8 @@ class temo extends StatelessWidget {
     var _width=MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-            backgroundColor: Colors.transparent,
+        forceMaterialTransparency: true,
+            backgroundColor: Colors.white,
           title: FittedBox(child: Text("Money Split",style: TextStyle(
             fontSize: _width*0.09,
             fontFamily: "Meme",
@@ -22,7 +23,7 @@ class temo extends StatelessWidget {
       body: Container(
         width: double.maxFinite,
         height: double.maxFinite,
-        color: Colors.grey,
+
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -69,7 +70,9 @@ class temo extends StatelessWidget {
                     thickness: 2,
 
                   ),
-                  Expanded(child:ListView.builder(itemBuilder:  (context, index) {
+                  Expanded(
+                    flex: 3,
+                      child:ListView.builder(itemBuilder:  (context, index) {
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ListTile(
@@ -106,7 +109,9 @@ class temo extends StatelessWidget {
                     thickness: 2,
 
                   ),
-                  Expanded(child:ListView.builder(itemBuilder:  (context, index) {
+                  Expanded(
+                      flex: 1,
+                      child:ListView.builder(itemBuilder:  (context, index) {
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ListTile(
