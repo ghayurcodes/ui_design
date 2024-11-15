@@ -90,10 +90,10 @@ class temo extends StatelessWidget {
                       ),
 
                     );
-                  },itemCount: 2,) ),
+                  },itemCount: 5,) ),
                   Padding(
                     padding: const EdgeInsets.all(10),
-                    child: Text('People you owe',style: TextStyle(
+                    child: Text('People who owe you',style: TextStyle(
                         fontSize: _width*0.06,
                         fontWeight: FontWeight.w500
 
