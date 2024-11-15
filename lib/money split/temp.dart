@@ -27,10 +27,11 @@ class temo extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Expanded(child: Container(
-                child:Column(
-                  children: [
-                    Row(
+              Expanded(child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                        children: [
                          Container(
@@ -50,10 +51,15 @@ class temo extends StatelessWidget {
                            ),
                          ),
                        ],
-                    )
-                  ],
-                )
-                ,
+                    ),
+                  ),
+                  Expanded(child:ListView.builder(itemBuilder:  (context, index) {
+                    return ListTile(
+                      
+                    );
+                  },) ),
+                  // Expanded(child: ),
+                ],
               )),
               Container(
                 margin: EdgeInsets.only(bottom: 10,right: 10,left: 10),
