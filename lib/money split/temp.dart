@@ -55,14 +55,20 @@ class temo extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(10),
                     child: Text('People you owe',style: TextStyle(
                       fontSize: _width*0.06,
                       fontWeight: FontWeight.w500
 
                     ),),
                   ),
-                   
+                  Divider(
+                    endIndent: 10,
+                    indent: 10,
+                    color: Colors.black,
+                    thickness: 2,
+
+                  ),
                   Expanded(child:ListView.builder(itemBuilder:  (context, index) {
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -85,7 +91,44 @@ class temo extends StatelessWidget {
 
                     );
                   },itemCount: 2,) ),
-                  // Expanded(child: ),
+                  Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Text('People you owe',style: TextStyle(
+                        fontSize: _width*0.06,
+                        fontWeight: FontWeight.w500
+
+                    ),),
+                  ),
+                  Divider(
+                    endIndent: 10,
+                    indent: 10,
+                    color: Colors.black,
+                    thickness: 2,
+
+                  ),
+                  Expanded(child:ListView.builder(itemBuilder:  (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ListTile(
+                        leading: CircleAvatar(
+                          radius: 25,
+                          backgroundColor: Colors.red,
+                        ),
+                        title: Text("Chris porter",style: TextStyle(
+                          fontSize: _width*0.05,
+
+                        ),),
+                        trailing: FittedBox(
+                          child: Text("\$30",style: TextStyle(
+                            fontSize: _width*0.09,
+                            fontFamily: "splash",
+
+                          ),),
+                        ),
+                      ),
+
+                    );
+                  },itemCount: 1,) ),
                 ],
               )),
               Container(
