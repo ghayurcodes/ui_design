@@ -103,7 +103,7 @@ class temo extends StatelessWidget {
                     endIndent: 10,
                     indent: 10,
                     color: Colors.black,
-                    thickness: 2,
+                    thickness: 1,
 
                   ),
                   Expanded(
@@ -144,7 +144,7 @@ class temo extends StatelessWidget {
                     endIndent: 10,
                     indent: 10,
                     color: Colors.black,
-                    thickness: 2,
+                    thickness: 1,
 
                   ),
                   Expanded(
