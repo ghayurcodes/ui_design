@@ -27,6 +27,34 @@ class temo extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
+              Expanded(child: Container(
+                child:Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                       children: [
+                         Container(
+                           width: _width*0.4,
+                           height: _width*0.4,
+                           decoration: BoxDecoration(
+                             color: Colors.redAccent,
+                              shape: BoxShape.circle
+                           ),
+                         ),
+                         Container(
+                           width: _width*0.4,
+                           height: _width*0.4,
+                           decoration: BoxDecoration(
+                               color: Colors.greenAccent,
+                               shape: BoxShape.circle
+                           ),
+                         ),
+                       ],
+                    )
+                  ],
+                )
+                ,
+              )),
               Container(
                 margin: EdgeInsets.only(bottom: 10,right: 10,left: 10),
                 width: _width,
