@@ -15,9 +15,7 @@ class temo extends StatelessWidget {
     var _height=MediaQuery.of(context).size.height;
     var _width=MediaQuery.of(context).size.width;
 
-
-
-     popup_add(){
+    popup_add(){
       return showCupertinoDialog(
         context: context,
         builder: (context) {
