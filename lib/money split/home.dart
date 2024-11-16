@@ -1,15 +1,49 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class temo extends StatelessWidget {
   const temo({super.key});
 
+
+
+
+
   @override
   Widget build(BuildContext context) {
     var _height=MediaQuery.of(context).size.height;
     var _width=MediaQuery.of(context).size.width;
+
+
+
+     popup_add(){
+      return showCupertinoDialog(
+        context: context,
+        builder: (context) {
+          return CupertinoAlertDialog(
+            title: Text('Edit Data'),
+            content: CupertinoTextField(
+              placeholder: 'Enter new value',
+              maxLines: null,
+              autofocus: true,
+            ),
+            actions: [
+              CupertinoDialogAction(
+                child: Text('Cancel'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+
+            ],
+          );
+        },
+      );
+    }
+
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         forceMaterialTransparency: true,
             backgroundColor: Colors.white,
@@ -188,7 +222,8 @@ class temo extends StatelessWidget {
                   children: [
                     Icon(Icons.history,size: _width*0.1,),
                     InkWell(child: Icon(Icons.add_circle_rounded,size: _width*0.2,color: Colors.green,),
-                    onTap: ,),
+                    onTap: (){popup_add();},),
+
                     Icon(Icons.person,size: _width*0.1,),
 
 
