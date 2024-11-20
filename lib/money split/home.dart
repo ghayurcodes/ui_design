@@ -219,7 +219,7 @@ class temo extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Icon(Icons.history,size: _width*0.1,),
-                    InkWell(child: Icon(Icons.add_circle_rounded,size: _width*0.2,color: Colors.green,),
+                    InkWell(child: FittedBox(child: Icon(Icons.add_circle_rounded,size: _width*0.2,color: Colors.green,)),
                     onTap: (){popup_add();},),
 
                     Icon(Icons.person,size: _width*0.1,),
