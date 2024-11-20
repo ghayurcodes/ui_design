@@ -13,6 +13,7 @@ class login extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       resizeToAvoidBottomInset: false,
+
       body: Center(
         child: Container(
             width: _width,
