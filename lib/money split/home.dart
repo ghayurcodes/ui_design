@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class temo extends StatelessWidget {
-  const temo({super.key});
+class homepage extends StatelessWidget {
+  const homepage({super.key});
 
 
 
