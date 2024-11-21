@@ -19,14 +19,7 @@ class homepage extends StatelessWidget {
       return showDialog(
         context: context,
         builder: (context) {
-          return AlertDialog(
-            title: Text("Test"),
-            content: Container(
-              color: Colors.greenAccent,
-              width: _width,
-              height: _height*0.1,
-            ),
-          );
+          return Dai
         },
       );
     }
