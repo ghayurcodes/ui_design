@@ -24,7 +24,7 @@ var amount=TextEditingController();
         builder: (context) {
           return Center(
             child: BlurryContainer(
-                height: _height*0.4,
+                height: _height*0.35,
               width: _width*0.6,
               color: Colors.black.withOpacity(0.1),
               child:Column(
@@ -86,38 +86,45 @@ var amount=TextEditingController();
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Expanded(
-                          flex:5,
-                          child: Container(
-                            height: _height*0.09,
-                            width: _width*0.2,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15),
-                              color: Colors.red.withOpacity(0.8)
-                            ),
-                            child: Center(
-                              child: Text("I Owe",style: TextStyle(
-                                  fontWeight: FontWeight.bold
-                              ),),
-                            ),
+                        Container(
+                          height: _height*0.09,
+                          width: _width*0.2,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                            color: Colors.red.withOpacity(0.8)
+                          ),
+                          child: Center(
+                            child: Text("I Owe",style: TextStyle(
+                                fontWeight: FontWeight.bold
+                            ),),
                           ),
                         ),
-                        Expanded(child: Container(),flex: 1,),
-                        Expanded(
-                          flex: 5,
-                          child: Container(
-                            height: _height*0.09,
-                            width: _width*0.2,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15),
-                                color: Colors.green.withOpacity(0.8)
-                            ),
-                            child: Center(
-                              child: Text("Owe me",style: TextStyle(
+                        Container(
+                          height: _height*0.09,
+                          width: _width*0.1,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              color: Colors.green.withOpacity(0.8)
+                          ),
+                          child: Center(
+                            child: Text("Cancel",style: TextStyle(
                                 fontWeight: FontWeight.bold
-                              ),),
-                            ),
+                            ),),
+                          ),
+                        ),
+                        Container(
+                          height: _height*0.09,
+                          width: _width*0.2,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              color: Colors.green.withOpacity(0.8)
+                          ),
+                          child: Center(
+                            child: Text("Owe me",style: TextStyle(
+                              fontWeight: FontWeight.bold
+                            ),),
                           ),
                         )
                       ],
