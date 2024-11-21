@@ -22,7 +22,7 @@ class homepage extends StatelessWidget {
         builder: (context) {
           return Center(
             child: BlurryContainer(
-                height: _height*0.2,
+                height: _height*0.4,
               width: _width*0.6,
               color: Colors.black.withOpacity(0.1),
               child:Column(
@@ -32,9 +32,9 @@ class homepage extends StatelessWidget {
                     child: TextField(
                       cursorColor: Colors.white,
                       decoration: InputDecoration(
-                        hintText:"type here",
+                        hintText:"Name",
                         contentPadding: EdgeInsets.all(10),
-                        hintStyle: TextStyle(color: Colors.white),
+                        hintStyle: TextStyle(color: Colors.white.withOpacity(0.7)),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15),
                           borderSide: BorderSide(
@@ -52,30 +52,70 @@ class homepage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: Container(
-                          height: _height*0.09,
-                          width: _width*0.2,
-                          decoration: BoxDecoration(
-                            
-                            color: Colors.red.withOpacity(0.8)
-                          ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextField(
+                      cursorColor: Colors.white,
+                      decoration: InputDecoration(
+                        hintText:"Amount",
+                        contentPadding: EdgeInsets.all(10),
+                        hintStyle: TextStyle(color: Colors.white.withOpacity(0.7)),
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15),
+                            borderSide: BorderSide(
+                                color: Colors.black,
+                                width: 1
+                            )
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15),
+                            borderSide: BorderSide(
+                                color: Colors.white,
+                                width: 1
+                            )
                         ),
                       ),
-
-                      Expanded(
-                        child: Container(
-                          height: _height*0.09,
-                          width: _width*0.2,
-                          decoration: BoxDecoration(
-
-                              color: Colors.green.withOpacity(0.8)
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          flex:5,
+                          child: Container(
+                            height: _height*0.09,
+                            width: _width*0.2,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                              color: Colors.red.withOpacity(0.8)
+                            ),
+                            child: Center(
+                              child: Text("I Owe",style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                              ),),
+                            ),
                           ),
                         ),
-                      )
-                    ],
+                        Expanded(child: Container(),flex: 1,),
+                        Expanded(
+                          flex: 5,
+                          child: Container(
+                            height: _height*0.09,
+                            width: _width*0.2,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                color: Colors.green.withOpacity(0.8)
+                            ),
+                            child: Center(
+                              child: Text("Owe me",style: TextStyle(
+                                fontWeight: FontWeight.bold
+                              ),),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ],
               )
