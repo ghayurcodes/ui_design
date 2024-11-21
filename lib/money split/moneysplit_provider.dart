@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:hive/hive.dart';
 
-part 'entry.g.dart'; // This generates the required adapter code.
+part 'moneysplit_provider.g.dart'; // This generates the required adapter code.
 
 /// The data provider class for managing data with Hive.
 class DataProvider with ChangeNotifier {
