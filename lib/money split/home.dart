@@ -8,9 +8,11 @@ import 'package:hive/hive.dart';
 class homepage extends StatelessWidget {
    homepage({super.key});
 
+final _hivebox=Hive.box('MoneySplit');
 var name=TextEditingController();
 var amount=TextEditingController();
-
+var owe_me=[];
+var i_owe=[];
 
 
 
@@ -18,8 +20,7 @@ var amount=TextEditingController();
   Widget build(BuildContext context) {
     var _height=MediaQuery.of(context).size.height;
     var _width=MediaQuery.of(context).size.width;
-    var owe_me=[];
-    var i_owe=[];
+
 
     popup_add(){
       return showDialog(
