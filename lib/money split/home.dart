@@ -16,25 +16,16 @@ class homepage extends StatelessWidget {
     var _width=MediaQuery.of(context).size.width;
 
     popup_add(){
-      return showCupertinoDialog(
+      return showDialog(
         context: context,
         builder: (context) {
-          return CupertinoAlertDialog(
-            title: Text('Edit Data'),
-            content: CupertinoTextField(
-              placeholder: 'Enter new value',
-              maxLines: null,
-              autofocus: true,
+          return AlertDialog(
+            title: Text("Test"),
+            content: Container(
+              color: Colors.greenAccent,
+              width: _width,
+              height: _height*0.1,
             ),
-            actions: [
-              CupertinoDialogAction(
-                child: Text('Cancel'),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-              ),
-
-            ],
           );
         },
       );
