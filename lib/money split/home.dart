@@ -6,6 +6,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 import 'package:ui_design/money%20split/moneysplit_provider.dart';
 
+import 'Hive data/entry.dart';
+
 class homepage extends StatefulWidget {
    homepage({super.key});
 

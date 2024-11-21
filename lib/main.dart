@@ -11,14 +11,16 @@ import 'package:ui_design/travel%20app/screens/home.dart';
 import 'package:ui_design/travel%20app/screens/spalsh_screen.dart';
 import 'package:provider/provider.dart';
 
+import 'money split/Hive data/entry.dart';
+
 void main() async {
   await Hive.initFlutter();
 
   // Register the adapter
-   Hive.registerAdapter(EntryAdapter());
+  // await Hive.registerAdapter(EntryAdapter());
 
   // Open a box for Entry objects
-  var entryBox = await Hive.openBox<Entry>('EntryBox');
+  var entryBox = await Hive.openBox('MoneySplit');
 
   runApp(const MyApp());
 }
