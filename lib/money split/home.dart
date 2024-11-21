@@ -32,7 +32,8 @@ void store(){
   owe_me.add([name.text.trim(),double.parse(amount.text.trim())]);
   _mybox.put(1, owe_me);
   print(_mybox.get(1));
-  print(owe_me);
+  print(owe_me[1]);
+
 }
     popup_add(){
       return showDialog(
