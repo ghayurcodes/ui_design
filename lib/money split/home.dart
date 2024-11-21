@@ -23,40 +23,56 @@ class homepage extends StatelessWidget {
           return Center(
             child: BlurryContainer(
                 height: _height*0.2,
-              width: _width*0.8,
+              width: _width*0.6,
               color: Colors.black.withOpacity(0.1),
               child:Column(
                 children: [
-                  TextField(
-                    cursorColor: Colors.white,
-                    decoration: InputDecoration(
-                      hintText:"type here",
-                      contentPadding: EdgeInsets.all(10),
-                      hintStyle: TextStyle(color: Colors.white),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15),
-                        borderSide: BorderSide(
-                          color: Colors.black,
-                          width: 1
-                        )
-                      ),
-                      enabledBorder: OutlineInputBorder(
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextField(
+                      cursorColor: Colors.white,
+                      decoration: InputDecoration(
+                        hintText:"type here",
+                        contentPadding: EdgeInsets.all(10),
+                        hintStyle: TextStyle(color: Colors.white),
+                        focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15),
                           borderSide: BorderSide(
-                              color: Colors.white,
-                              width: 1
+                            color: Colors.black,
+                            width: 1
                           )
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15),
+                            borderSide: BorderSide(
+                                color: Colors.white,
+                                width: 1
+                            )
+                        ),
                       ),
                     ),
                   ),
                   Row(
                     children: [
-                      Container(
-                        height: _height*0.09,
-                        width: _width*0.2,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.red.withOpacity(0.8)
+                      Expanded(
+                        child: Container(
+                          height: _height*0.09,
+                          width: _width*0.2,
+                          decoration: BoxDecoration(
+                            
+                            color: Colors.red.withOpacity(0.8)
+                          ),
+                        ),
+                      ),
+
+                      Expanded(
+                        child: Container(
+                          height: _height*0.09,
+                          width: _width*0.2,
+                          decoration: BoxDecoration(
+
+                              color: Colors.green.withOpacity(0.8)
+                          ),
                         ),
                       )
                     ],
