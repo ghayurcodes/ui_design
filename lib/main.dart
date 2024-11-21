@@ -19,10 +19,11 @@ void main() async {
   // Register the adapter for Entry class
    Hive.registerAdapter(EntryAdapter());
 
-  // Open the box for Entry objects
-  var entryBox = await Hive.openBox<Entry>('MoneySplit');
+  // Open the box only once, and keep it open throughout the app
+  var entryBox = await Hive.openBox<Entry>('Moneys');
 
-  runApp(const MyApp());
+  // Now run the app
+  runApp(MyApp());
 }
 
 
