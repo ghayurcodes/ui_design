@@ -16,11 +16,11 @@ import 'money split/Hive data/entry.dart';
 void main() async {
   await Hive.initFlutter();
 
-  // Register the adapter
-  // await Hive.registerAdapter(EntryAdapter());
+  // Register the adapter for Entry class
+   Hive.registerAdapter(EntryAdapter());
 
-  // Open a box for Entry objects
-  var entryBox = await Hive.openBox('MoneySplit');
+  // Open the box for Entry objects
+  var entryBox = await Hive.openBox<Entry>('MoneySplit');
 
   runApp(const MyApp());
 }
