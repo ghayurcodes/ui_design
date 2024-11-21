@@ -15,7 +15,7 @@ void main() async {
   await Hive.initFlutter();
 
   // Register the adapter
-  Hive.registerAdapter(EntryAdapter());
+   Hive.registerAdapter(EntryAdapter());
 
   // Open a box for Entry objects
   var entryBox = await Hive.openBox<Entry>('EntryBox');

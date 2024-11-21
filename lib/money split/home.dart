@@ -20,9 +20,9 @@ var name=TextEditingController();
 
 var amount=TextEditingController();
 
-List<entry> owe_me=[];
+List<Entry> owe_me=[];
 
-List<entry> i_owe=[];
+List<Entry> i_owe=[];
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ List<entry> i_owe=[];
     var _width=MediaQuery.of(context).size.width;
 
 void store(){
-  entry temp=new entry(name.text.trim(),double.parse(amount.text.trim()),DateTime.now().toIso8601String());
+  Entry temp=new Entry(name.text.trim(),double.parse(amount.text.trim()),DateTime.now().toIso8601String());
   owe_me.add(temp);
   _mybox.put(1, owe_me);
   print(_mybox.get(1));
