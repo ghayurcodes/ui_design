@@ -17,6 +17,8 @@ var amount=TextEditingController();
   Widget build(BuildContext context) {
     var _height=MediaQuery.of(context).size.height;
     var _width=MediaQuery.of(context).size.width;
+    var owe_me=[];
+    var i_owe=[];
 
     popup_add(){
       return showDialog(
