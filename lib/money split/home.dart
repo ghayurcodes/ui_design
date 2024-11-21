@@ -5,23 +5,35 @@ import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 
-class homepage extends StatelessWidget {
+class homepage extends StatefulWidget {
    homepage({super.key});
 
-final _hivebox=Hive.box('MoneySplit');
+  @override
+  State<homepage> createState() => _homepageState();
+}
+
+class _homepageState extends State<homepage> {
+final _mybox=Hive.box('MoneySplit');
+
 var name=TextEditingController();
+
 var amount=TextEditingController();
+
 var owe_me=[];
+
 var i_owe=[];
-
-
 
   @override
   Widget build(BuildContext context) {
     var _height=MediaQuery.of(context).size.height;
     var _width=MediaQuery.of(context).size.width;
 
-
+void store(){
+  owe_me.add([name.text.trim(),double.parse(amount.text.trim())]);
+  _mybox.put(1, owe_me);
+  print(_mybox.get(1));
+  print(owe_me);
+}
     popup_add(){
       return showDialog(
         context: context,
@@ -107,6 +119,7 @@ var i_owe=[];
                         ),
                         GestureDetector(
                           onTap: () {
+                            store();
                             Navigator.pop(context);
                           },
                           child: Container(

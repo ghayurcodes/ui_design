@@ -11,10 +11,10 @@ import 'package:ui_design/travel%20app/screens/spalsh_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized(); // Ensures all plugins are initialized
   await Hive.initFlutter();
-  
-  var box=Hive.openBox("MoneySplit");
-  runApp(const MyApp());
+  await Hive.openBox('MoneySplit');
+  runApp(const MyApp()); // Start the app
 }
 
 class MyApp extends StatelessWidget {
