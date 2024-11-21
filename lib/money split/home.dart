@@ -90,7 +90,7 @@ var amount=TextEditingController();
                       children: [
                         Container(
                           height: _height*0.09,
-                          width: _width*0.2,
+                          width: _width*0.18,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
                             color: Colors.red.withOpacity(0.8)
@@ -101,22 +101,27 @@ var amount=TextEditingController();
                             ),),
                           ),
                         ),
-                        Container(
-                          height: _height*0.09,
-                          width: _width*0.1,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              color: Colors.green.withOpacity(0.8)
-                          ),
-                          child: Center(
-                            child: Text("Cancel",style: TextStyle(
-                                fontWeight: FontWeight.bold
-                            ),),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          child: Container(
+                            height: _height*0.09,
+                            width: _width*0.13,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                color: Colors.yellow.withOpacity(0.8)
+                            ),
+                            child: Center(
+                              child: Text("Cancel",style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                              ),),
+                            ),
                           ),
                         ),
                         Container(
                           height: _height*0.09,
-                          width: _width*0.2,
+                          width: _width*0.18,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
                               color: Colors.green.withOpacity(0.8)
