@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
+import 'package:ui_design/money%20split/moneysplit_provider.dart';
 
 class homepage extends StatefulWidget {
    homepage({super.key});
@@ -19,9 +20,9 @@ var name=TextEditingController();
 
 var amount=TextEditingController();
 
-var owe_me=[];
+List<entry> owe_me=[];
 
-var i_owe=[];
+List<entry> i_owe=[];
 
   @override
   Widget build(BuildContext context) {
@@ -29,10 +30,11 @@ var i_owe=[];
     var _width=MediaQuery.of(context).size.width;
 
 void store(){
-  owe_me.add([name.text.trim(),double.parse(amount.text.trim())]);
+  entry temp=new entry(name.text.trim(),double.parse(amount.text.trim()),DateTime.now().toIso8601String());
+  owe_me.add(temp);
   _mybox.put(1, owe_me);
   print(_mybox.get(1));
-  print(owe_me[1]);
+  print(owe_me.length);
 
 }
     popup_add(){
