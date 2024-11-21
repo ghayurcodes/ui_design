@@ -5,8 +5,10 @@ import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class homepage extends StatelessWidget {
-  const homepage({super.key});
+   homepage({super.key});
 
+var name=TextEditingController();
+var amount=TextEditingController();
 
 
 
@@ -30,7 +32,9 @@ class homepage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextField(
+                      style: TextStyle(color: Colors.white.withOpacity(0.7)),
                       cursorColor: Colors.white,
+                      controller: name,
                       decoration: InputDecoration(
                         hintText:"Name",
                         contentPadding: EdgeInsets.all(10),
@@ -38,8 +42,8 @@ class homepage extends StatelessWidget {
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15),
                           borderSide: BorderSide(
-                            color: Colors.black,
-                            width: 1
+                            color: Colors.white,
+                            width: 2
                           )
                         ),
                         enabledBorder: OutlineInputBorder(
@@ -56,6 +60,8 @@ class homepage extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: TextField(
                       cursorColor: Colors.white,
+                      controller: amount,
+                      style: TextStyle(color: Colors.white.withOpacity(0.7)),
                       decoration: InputDecoration(
                         hintText:"Amount",
                         contentPadding: EdgeInsets.all(10),
@@ -63,8 +69,8 @@ class homepage extends StatelessWidget {
                         focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(15),
                             borderSide: BorderSide(
-                                color: Colors.black,
-                                width: 1
+                                color: Colors.white,
+                                width: 2
                             )
                         ),
                         enabledBorder: OutlineInputBorder(
