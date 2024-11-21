@@ -16,7 +16,7 @@ class homepage extends StatefulWidget {
 }
 
 class _homepageState extends State<homepage> {
-final _mybox=Hive.box<Entry>('Moneys');
+final _mybox=Hive.box<List<Entry>>('MoneySplit');
 
 var name=TextEditingController();
 
@@ -34,9 +34,9 @@ List<Entry> i_owe=[];
 void store(){
   Entry temp=new Entry(name.text.trim(),double.parse(amount.text.trim()),DateTime.now().toIso8601String());
   owe_me.add(temp);
-  _mybox.put(1, temp);
-  print(_mybox.get(1));
+  _mybox.put("entries", owe_me);
   print(owe_me.length);
+  print(_mybox.get("entries"));
 
 }
     popup_add(){
