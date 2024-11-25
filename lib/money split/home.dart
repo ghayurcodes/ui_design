@@ -124,9 +124,14 @@ void store(){
                         ),
                         GestureDetector(
                           onTap: () {
-                            if(name.text.isNotEmpty )
-                            store();
-                            Navigator.pop(context);
+                            if(name.text.isNotEmpty && amount.text.isNotEmpty ){
+                              store();
+                              Navigator.pop(context);
+                            }
+                            else{
+                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Please enter something")));
+                            }
+
                           },
                           child: Container(
                             height: _height*0.09,
