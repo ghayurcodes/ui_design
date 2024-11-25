@@ -124,6 +124,7 @@ void store(){
                         ),
                         GestureDetector(
                           onTap: () {
+                            if(name.text.isNotEmpty )
                             store();
                             Navigator.pop(context);
                           },
