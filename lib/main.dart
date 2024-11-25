@@ -20,7 +20,7 @@ void main() async {
    Hive.registerAdapter(EntryAdapter());
 
   // Open the box only once, and keep it open throughout the app
-  var entryBox = await Hive.openBox('MoneySplit');
+  var entryBox = await Hive.openBox<List<Entry>>('MoneySplit');
 
   // Now run the app
   runApp(MyApp());
