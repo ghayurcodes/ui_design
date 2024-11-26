@@ -30,7 +30,7 @@ class user_screen extends StatelessWidget {
                 child: Column(
                   children: [
                     Expanded(child: Container(
-                      color: Colors.pink,
+                      color: Colors.lightBlueAccent,
                       // margin: EdgeInsets.all(15),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -47,12 +47,14 @@ class user_screen extends StatelessWidget {
                               radius: 60,
                             ),
                           ),
-                          Column(
-                            children: [
-                              Text("Nmae Hereee",style: TextStyle(fontSize: _width*0.1),
-                              ),
-                              Text("you owe",style: TextStyle(fontSize: _width*0.05,color: Colors.red),)
-                            ],
+                          FittedBox(
+                            child: Column(
+                              children: [
+                                Text("Nmae Here",style: TextStyle(fontSize: _width*0.1),
+                                ),
+                                Text("you owe",style: TextStyle(fontSize: _width*0.05,color: Colors.red),)
+                              ],
+                            ),
                           )
                         ],
                       ),
