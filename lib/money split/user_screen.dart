@@ -26,10 +26,17 @@ class user_screen extends StatelessWidget {
         child: Column(
           children: [
             Expanded(child: Container(
-              margin: EdgeInsets.all(15),
+              // margin: EdgeInsets.all(15),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Container(
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.black,
+                    ),
+
+                    padding: EdgeInsets.all(5),
                     child: CircleAvatar(
                       backgroundColor: Colors.redAccent,
                       radius: 60,
