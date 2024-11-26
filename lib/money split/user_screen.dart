@@ -53,7 +53,7 @@ class user_screen extends StatelessWidget {
                                   FittedBox(
                                     fit: BoxFit.scaleDown,
                                     child: Text(
-                                      "Name dddddddd",
+                                      "Name ddd",
                                       style: TextStyle(
                                         fontSize: _width * 0.1,
                                         fontWeight: FontWeight.bold,
