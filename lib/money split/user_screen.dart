@@ -23,7 +23,12 @@ class user_screen extends StatelessWidget {
         width: _width,
         height: _height,
           color: Colors.grey,
-
+        child: Column(
+          children: [
+            Expanded(child: Container(),flex: 3,),
+            Container(),
+          ],
+        ),
       ),
     );
   }
