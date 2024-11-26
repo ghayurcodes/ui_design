@@ -46,7 +46,7 @@ class user_screen extends StatelessWidget {
                                 radius: 60,
                               ),
                             ),
-                            Flexible(
+                            FittedBox(
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
