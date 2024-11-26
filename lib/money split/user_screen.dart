@@ -25,27 +25,52 @@ class user_screen extends StatelessWidget {
           color: Colors.grey,
         child: Column(
           children: [
-            Expanded(child: Container(
-              // margin: EdgeInsets.all(15),
+            Column(
+              children: [
+                Expanded(child: Container(
+                  // margin: EdgeInsets.all(15),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.black,
+                        ),
+
+                        padding: EdgeInsets.all(3),
+                        child: CircleAvatar(
+                          backgroundColor: Colors.redAccent,
+                          radius: 60,
+                        ),
+                      )
+                    ],
+                  ),
+                ),flex: 3,),
+                Expanded(child: Container(),flex: 10,),
+              ],
+            ),
+            Container(
+              margin: EdgeInsets.only(bottom: 10,right: 10,left: 10),
+              width: _width,
+              height: _height*0.1,
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(25)
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.black,
-                    ),
+                  Icon(Icons.history,size: _width*0.1,),
+                  InkWell(child: FittedBox(child: Icon(Icons.add_circle_rounded,size: _width*0.2,color: Colors.green,)),
+                    onTap: (){},),
 
-                    padding: EdgeInsets.all(5),
-                    child: CircleAvatar(
-                      backgroundColor: Colors.redAccent,
-                      radius: 60,
-                    ),
-                  )
+                  Icon(Icons.person,size: _width*0.1,),
+
+
                 ],
               ),
-            ),flex: 3,),
-            Expanded(child: Container(),flex: 10,),
+            )
           ],
         ),
       ),
