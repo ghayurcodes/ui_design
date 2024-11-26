@@ -6,6 +6,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:ui_design/login-signup-ui/sugnup_screen.dart';
 import 'package:ui_design/money%20split/home_screen.dart';
 import 'package:ui_design/money%20split/moneysplit_provider.dart';
+import 'package:ui_design/money%20split/user_screen.dart';
 import 'package:ui_design/travel%20app/providers/travel_app_provider.dart';
 import 'package:ui_design/travel%20app/screens/home.dart';
 import 'package:ui_design/travel%20app/screens/spalsh_screen.dart';
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: homepage(),
+        home: user_screen(),
       ),
     );
   }
