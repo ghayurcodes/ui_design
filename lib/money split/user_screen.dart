@@ -26,7 +26,7 @@ class user_screen extends StatelessWidget {
         child: Column(
           children: [
             Expanded(child: Container(),flex: 3,),
-            Container(),
+            Expanded(child: Container(),flex: 10,),
           ],
         ),
       ),
