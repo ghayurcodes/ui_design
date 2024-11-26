@@ -25,7 +25,18 @@ class user_screen extends StatelessWidget {
           color: Colors.grey,
         child: Column(
           children: [
-            Expanded(child: Container(),flex: 3,),
+            Expanded(child: Container(
+              child: Row(
+                children: [
+                  Container(
+                    child: CircleAvatar(
+                      backgroundColor: Colors.redAccent,
+                      radius: 60,
+                    ),
+                  )
+                ],
+              ),
+            ),flex: 3,),
             Expanded(child: Container(),flex: 10,),
           ],
         ),
