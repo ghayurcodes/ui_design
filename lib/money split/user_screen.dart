@@ -26,6 +26,7 @@ class user_screen extends StatelessWidget {
         child: Column(
           children: [
             Expanded(child: Container(
+              margin: EdgeInsets.all(15),
               child: Row(
                 children: [
                   Container(
