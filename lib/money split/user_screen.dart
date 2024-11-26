@@ -35,42 +35,54 @@ class user_screen extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Colors.black,
-                              ),
-                              padding: EdgeInsets.all(3),
-                              child: CircleAvatar(
-                                backgroundColor: Colors.redAccent,
-                                radius: 60,
+                            Expanded(
+                              flex: 3,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.black,
+                                ),
+                                padding: EdgeInsets.all(3),
+                                child: CircleAvatar(
+                                  backgroundColor: Colors.redAccent,
+                                  radius: 60,
+                                ),
                               ),
                             ),
-                            FittedBox(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  FittedBox(
-                                    fit: BoxFit.scaleDown,
-                                    child: Text(
-                                      "Name ddd",
-                                      style: TextStyle(
-                                        fontSize: _width * 0.1,
-                                        fontWeight: FontWeight.bold,
+                            Expanded(
+                              flex: 6,
+                              child: Container(
+                                color: Colors.grey,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    FittedBox(
+                                      child: Text(
+                                        "hussain",
+                                        style: TextStyle(
+                                          fontSize: _width * 0.1,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                        textAlign: TextAlign.left,
                                       ),
-                                      textAlign: TextAlign.center,
                                     ),
-                                  ),
-                                  SizedBox(height: 5),
-                                  Text(
-                                    "you owe",
-                                    style: TextStyle(
-                                      fontSize: _width * 0.05,
-                                      color: Colors.red,
+                                    SizedBox(height: 5),
+                                    FittedBox(
+                                      child: Text(
+                                        "you owe",
+                                        style: TextStyle(
+                                          fontSize: _width * 0.05,
+                                          color: Colors.red,
+                                        ),
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
+                            ),
+                            Expanded(
+                              child: Container(),
+                              flex: 1,
                             )
                           ],
                         ),
