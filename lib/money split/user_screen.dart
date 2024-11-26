@@ -7,13 +7,23 @@ class user_screen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    var _height=MediaQuery.of(context).size.height;
+    var _width=MediaQuery.of(context).size.width;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        actions: [Icon(LineIcons.info)],
+        actions: [Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Icon(Icons.more_vert_rounded),
+        )],
       ),
       body: Container(
-        
+        width: _width,
+        height: _height,
+          color: Colors.grey,
+
       ),
     );
   }
