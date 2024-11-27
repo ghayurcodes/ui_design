@@ -33,57 +33,55 @@ class user_screen extends StatelessWidget {
                       child: Container(
                         color: Colors.lightBlueAccent,
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Expanded(
-                              flex: 5,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: Colors.black,
-                                ),
-                                padding: EdgeInsets.all(3),
-                                child: CircleAvatar(
-                                  backgroundColor: Colors.redAccent,
-                                  radius:_width*0.18,
-                                ),
+                            Container(
+                              margin: EdgeInsets.all(20),
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Colors.black,
+                              ),
+                              padding: EdgeInsets.all(3),
+                              child: CircleAvatar(
+                                backgroundColor: Colors.redAccent,
+                                radius:_width*0.15,
                               ),
                             ),
                             Expanded(
-                              flex: 6,
                               child: Container(
                                 color: Colors.grey,
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    FittedBox(
-                                      child: Text(
-                                        "hussain",
-                                        style: TextStyle(
-                                          fontSize: _width * 0.1,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                        textAlign: TextAlign.left,
-                                      ),
-                                    ),
-                                    SizedBox(height: 5),
-                                    FittedBox(
-                                      child: Text(
-                                        "you owe",
-                                        style: TextStyle(
-                                          fontSize: _width * 0.05,
-                                          color: Colors.red,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      FittedBox(
+                                        child: Text(
+                                          "dan abraham",
+                                          style: TextStyle(
+                                            fontSize: _width * 0.1,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                          textAlign: TextAlign.left,
                                         ),
                                       ),
-                                    ),
-                                  ],
+                                      SizedBox(height: 5),
+                                      FittedBox(
+                                        child: Text(
+                                          "you owe 50\$",
+                                          style: TextStyle(
+                                            fontSize: _width * 0.05,
+                                            color: Colors.red,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
-                            Expanded(
-                              child: Container(),
-                              flex: 1,
-                            )
+
                           ],
                         ),
                       ),
