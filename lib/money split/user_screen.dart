@@ -48,36 +48,33 @@ class user_screen extends StatelessWidget {
                               ),
                             ),
                             Expanded(
-                              child: Container(
-                                color: Colors.grey,
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      FittedBox(
-                                        child: Text(
-                                          "dan abraham",
-                                          style: TextStyle(
-                                            fontSize: _width * 0.1,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                          textAlign: TextAlign.left,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    FittedBox(
+                                      child: Text(
+                                        "dan abraham",
+                                        style: TextStyle(
+                                          fontSize: _width * 0.1,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                        textAlign: TextAlign.left,
+                                      ),
+                                    ),
+                                    SizedBox(height: 5),
+                                    FittedBox(
+                                      child: Text(
+                                        "you owe 50\$",
+                                        style: TextStyle(
+                                          fontSize: _width * 0.05,
+                                          color: Colors.red,
                                         ),
                                       ),
-                                      SizedBox(height: 5),
-                                      FittedBox(
-                                        child: Text(
-                                          "you owe 50\$",
-                                          style: TextStyle(
-                                            fontSize: _width * 0.05,
-                                            color: Colors.red,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ),
@@ -86,6 +83,10 @@ class user_screen extends StatelessWidget {
                         ),
                       ),
                     ),
+                    Divider(
+                       color: Colors.grey,height: 1,thickness: 2,
+                    ),
+
                     Expanded(
                       flex: 7,
                       child: Container(
