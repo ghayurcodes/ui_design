@@ -11,7 +11,7 @@ class Entry {
   late double amount;
 
   @HiveField(2)
-  late String time;
+  late DateTime time;
 
   Entry(this.name, this.amount, this.time); // Constructor
 }

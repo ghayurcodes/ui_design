@@ -19,7 +19,7 @@ class EntryAdapter extends TypeAdapter<Entry> {
     return Entry(
       fields[0] as String,
       fields[1] as double,
-      fields[2] as String,
+      fields[2] as DateTime,
     );
   }
 

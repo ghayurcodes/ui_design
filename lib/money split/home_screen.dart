@@ -32,14 +32,14 @@ List<Entry> i_owe=[];
     var _width=MediaQuery.of(context).size.width;
 
 void store(){
-  Entry temp=new Entry(name.text.trim(),double.parse(amount.text.trim()),DateTime.now().toIso8601String());
+  Entry temp=new Entry(name.text.trim(),double.parse(amount.text.trim()),DateTime.now());
   owe_me.add(temp);
   _mybox.put("entries", owe_me);
   print(owe_me.length);
   print(_mybox.get("entries"));
 
 }
-    popup_add(){
+popup_add(){
       return showDialog(
         context: context,
         builder: (context) {
