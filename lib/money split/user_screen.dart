@@ -36,7 +36,7 @@ class user_screen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Expanded(
-                              flex: 3,
+                              flex: 5,
                               child: Container(
                                 decoration: BoxDecoration(
                                   shape: BoxShape.circle,
@@ -45,7 +45,7 @@ class user_screen extends StatelessWidget {
                                 padding: EdgeInsets.all(3),
                                 child: CircleAvatar(
                                   backgroundColor: Colors.redAccent,
-                                  radius: 60,
+                                  radius:_width*0.18,
                                 ),
                               ),
                             ),
