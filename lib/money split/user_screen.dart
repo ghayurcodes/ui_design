@@ -9,6 +9,8 @@ class user_screen extends StatelessWidget {
   Widget build(BuildContext context) {
     var _height = MediaQuery.of(context).size.height;
     var _width = MediaQuery.of(context).size.width;
+    final previousMonth = DateTime(DateTime.now().year, DateTime.now().month - 1);
+
 
     return Scaffold(
       appBar: AppBar(
@@ -101,7 +103,17 @@ class user_screen extends StatelessWidget {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text(DateFormat('MMMM').format(DateTime.now())),
+                                    Align(
+                                      alignment: Alignment.centerLeft,
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(DateFormat('MMMM').format(DateTime.now()),style: TextStyle(
+                                        fontSize: _width*0.08,
+                                        fontWeight: FontWeight.w700,
+                                        color: Colors.black,
+                                      ),),
+                                      ),
+                                    ),
                                   ],
                                 ),
                               ),
@@ -112,8 +124,28 @@ class user_screen extends StatelessWidget {
                             Expanded(
                               child: Container(
                                 color: Colors.pinkAccent,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Align(
+                                      alignment: Alignment.centerLeft,
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          '${DateFormat('MMMM').format(previousMonth)}',
+                                          style: TextStyle(
+                                            fontSize: _width * 0.08,
+                                            fontWeight: FontWeight.w700,
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
+
 
                           ],
                         ),
