@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:intl/date_symbols.dart';
+import 'package:intl/intl.dart';
 
 class user_screen extends StatelessWidget {
   const user_screen({super.key});
@@ -90,7 +92,31 @@ class user_screen extends StatelessWidget {
                     Expanded(
                       flex: 7,
                       child: Container(
-                        color: Colors.yellow,
+                        color: Colors.white,
+                        child: Column(
+                          children: [
+                            Expanded(
+                              child: Container(
+                                color: Colors.red,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(DateFormat('MMMM').format(DateTime.now())),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Divider(
+                              color: Colors.grey,height: 1,thickness: 2,
+                            ),
+                            Expanded(
+                              child: Container(
+                                color: Colors.pinkAccent,
+                              ),
+                            ),
+
+                          ],
+                        ),
                       ),
                     ),
                   ],
